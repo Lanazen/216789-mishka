@@ -29,46 +29,63 @@
 
     <main>
       <section class="catalog">
+        <div class="catalog-intro">
+          <h1 class="catalog-intro__title">Каталог товаров</h1>
+        </div>
         <div class="catalog__wrapper">
-          <h1 class="catalog__title">Каталог товаров</h1>
-          <ul class="catalog__list">
-            <li class="catalog-item">
-              <a href=""><img src="http://placehold.it/150x100" alt="Зайчик-попрыгайчик"></a>
-              <b class="catalog-item__title"><a href="">Зайчик-попрыгайчик</a></b>
+          <article class="catalog-item">
+            <a class="catalog-item__photo" href="">
+              <img src="http://placehold.it/150x100" alt="Зайчик-попрыгайчик">
+            </a>
+            <div class="catalog-item__wrapper">
+              <a class="catalog-item__title" href="">Зайчик-попрыгайчик</a>
               <p class="catalog-item__details">Рост 30 см, вес 200 г</p>
-              <p class="catalog-item__price">1 200 руб.</p>
+              <span class="catalog-item__price">1 200 руб.</span>
               <a class="catalog-item__add" href=""></a>
-            </li>
-            <li class="catalog-item">
-              <a href=""><img src="http://placehold.it/150x100" alt="Корзинка для белья"></a>
-              <b class="catalog-item__title"><a href="">Корзинка для белья</a></b>
+            </div>
+          </article>
+          <article class="catalog-item">
+            <a class="catalog-item__photo" href="">
+              <img src="http://placehold.it/150x100" alt="Корзинка для белья">
+            </a>
+            <div class="catalog-item__wrapper">
+              <a class="catalog-item__title" href="">Корзинка для белья</a>
               <p class="catalog-item__details">Диаметр 15 см, высота 10 см</p>
-              <p class="catalog-item__price">690 руб.</p>
+              <span class="catalog-item__price">690 руб.</span>
               <a class="catalog-item__add" href=""></a>
-            </li>
-            <li class="catalog-item">
-              <a href=""><img src="http://placehold.it/150x100" alt="Корзинка для игрушек"></a>
-              <b class="catalog-item__title"><a href="">Большая корзинка для игрушек</a></b>
+            </div>
+          </article>
+          <article class="catalog-item">
+            <a class="catalog-item__photo" href="">
+              <img src="http://placehold.it/150x100" alt="Корзинка для игрушек">
+            </a>
+            <div class="catalog-item__wrapper">
+              <a class="catalog-item__title" href="">Большая корзинка для игрушек</a>
               <p class="catalog-item__details">Диаметр 30 см, высота 30 см</p>
-              <p class="catalog-item__price">1 500 руб.</p>
+              <span class="catalog-item__price">1 500 руб.</span>
               <a class="catalog-item__add" href=""></a>
-            </li>
-          </ul>
+            </div>
+          </article>
         </div>
       </section>
 
       <!--ADD TO BASKET-->
 
-      <section class="addition  visually-hidden">
+      <section class="addition  addition--hidden">
         <div class="addition__wrapper">
-          <b class="addition__title">Добавить в корзину</b>
-          <p class="addition__select">Выберите размер:</p>
-          <div class="addition__list  size">
-            <span class="size-unit  size-unit--selected">S</span>
-            <span class="size-unit">M</span>
-            <span class="size-unit">L</span>
-          </div>
-          <a class="btn  addition__size" href="">Добавить</a>
+          <form class="addition__form" action="https://echo.htmlacademy.ru" method="post">
+            <b class="addition__title">Добавить в корзину</b>
+            <fieldset class="size">
+              <legend class="size__select">Выберите размер:</legend>
+              <input class="size__input" type="radio" name="size-field" id="size-s" value="s" checked>
+              <label class="size__label  size__label--selected" for="size-s">S</label>
+              <input class="size__input" type="radio" name="size-field" id="size-m" value="m">
+              <label class="size__label" for="size-m">M</label>
+              <input class="size__input" type="radio" name="size-field" id="size-l" value="l">
+              <label class="size__label" for="size-l">L</label>
+            </fieldset>
+            <button class="btn  addition__size" type="submit">Добавить</button>
+          </form>
         </div>
       </section>
 
@@ -77,7 +94,9 @@
       <section class="process">
         <div class="process__wrapper">
           <b class="process__title">Процесс производства</b>
-          <video class="process__video  production" src="http://placehold.it" preload="metadata" width="400" height="225"></video>
+        </div>
+        <video class="process__video  production" src="http://placehold.it" preload="metadata" width="400" height="225"></video>
+        <div class="process__wrapper">
           <p class="process__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
           <a class="btn  process__order" href="">Сделать заказ</a>
         </div>
@@ -88,17 +107,15 @@
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <p class="page-footer__social">
-          <span class="social-links">
-            <a class="social-link social-link--in" href="https://www.instagram.com/htmlacademy"></a>
-            <a class="social-link social-link--fb" href="https://www.facebook.com/htmlacademy"></a>
-            <a class="social-link social-link--tw" href="https://www.twitter.com/htmlacademy"></a>
-          </span>
-        </p>
-        <p class="page-footer__copyright">
-          Разработано
-          <a class="btn  page-footer__copyright-link" href="https://www.htmlacademy.ru"></a>
-        </p>
+        <div class="social">
+          <a class="social__link social__link--in" href="https://www.instagram.com/htmlacademy"></a>
+          <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy"></a>
+          <a class="social__link social__link--tw" href="https://www.twitter.com/htmlacademy"></a>
+        </div>
+      </div>
+      <div class="page-footer__copyright">
+        Разработано
+        <a class="page-footer__copyright-link" href="https://www.htmlacademy.ru"></a>
       </div>
     </footer>
   </body>

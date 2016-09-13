@@ -29,48 +29,55 @@
 
     <main>
       <section class="form">
+        <div class="form-intro">
+          <h1 class="form-intro__title">Вязание на заказ</h1>
+        </div>
         <div class="form__wrapper">
-          <h1 class="form__title">Вязание на заказ</h1>
+          <p class="form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
           <form class="form__details  order" action="https://echo.htmlacademy.ru" method="post">
-            <p class="form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-            <h3>Тип</h3>
-            <input class="order__radio" type="radio" name="type-field" id="interior-field" value="interior" checked>
-            <label class="order__type" for="interior-field">Аксессуар для  интерьера</label>
-            <input class="order__radio" type="radio" name="type-field" id="toy-field" value="toy">
-            <label class="order__type" for="toy-field">Детская игрушка</label>
-            <h3>Цвет</h3>
-            <input class="order__checkbox" type="checkbox" name="white-field" id="white-color" checked>
-            <label class="order__color" for="white-color">Белый</label>
-            <input class="order__checkbox" type="checkbox" name="gray-field" id="gray-color" checked>
-            <label class="order__color" for="gray-color">Серый</label>
-            <input class="order__checkbox" type="checkbox" name="tiffany-field" id="tiffany-color">
-            <label class="order__color" for="tiffany-color">«Тиффани»</label>
-            <input class="order__checkbox" type="checkbox" name="black-field" id="black-color">
-            <label class="order__color" for="black-color">Черный</label>
-            <input class="order__checkbox" type="checkbox" name="pink-field" id="pink-color">
-            <label class="order__color" for="pink-color">Розовый</label>
-            <input class="order__checkbox" type="checkbox" name="orange-field" id="orange-color">
-            <label class="order__color" for="orange-color">Оранжевый</label>
-            <div class="form__name  details">
-              <h3>Фио</h3>
-              <label class="details__name" for="first-name">Имя:</label>
-              <input class="details__input" type="text" name="first-name" id="first-name" placeholder="Введите ваше имя" required><label class="details__name" for="surname">Фамилия:</label>
-              <input class="details__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию" required>
-              <label class="details__name" for="patronymic">Отчество:</label>
-              <input class="details__input" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете" required>
-              <label>
-                <h3>Тел</h3>
-                <input class="details__input" type="tel" name="tel" pattern="+7-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="+7 ХХХ ХХ ХХ" required>
-              </label>
-              <label>
-                <h3>E-mail</h3>
-                <input class="details__input" type="email" name="email" placeholder="Ваш Email" required>
-              </label>
-              <label>
-                <h3>Доп</h3>
-                <textarea class="details__message" name="message" placeholder="Опишите все ваши пожелания к заказу" required></textarea>
-              </label>
-            </div>
+            <fieldset class="order__wrapper">
+              <legend class="order__title">Тип</legend>
+              <input class="order__radio" type="radio" name="type-field" id="interior-field" value="interior" checked>
+              <label class="order__label  order__label--selected" for="interior-field">Аксессуар для  интерьера</label>
+              <input class="order__radio" type="radio" name="type-field" id="toy-field" value="toy">
+              <label class="order__label" for="toy-field">Детская игрушка</label>
+            </fieldset>
+            <fieldset class="order__wrapper">
+              <legend class="order__title">Цвет</legend>
+              <input class="order__checkbox" type="checkbox" name="white-field" id="white-color" checked>
+              <label class="order__label  order__label--selected" for="white-color">Белый</label>
+              <input class="order__checkbox" type="checkbox" name="gray-field" id="gray-color" checked>
+              <label class="order__label  order__label--selected" for="gray-color">Серый</label>
+              <input class="order__checkbox" type="checkbox" name="tiffany-field" id="tiffany-color">
+              <label class="order__label" for="tiffany-color">«Тиффани»</label>
+              <input class="order__checkbox" type="checkbox" name="black-field" id="black-color">
+              <label class="order__label" for="black-color">Черный</label>
+              <input class="order__checkbox" type="checkbox" name="pink-field" id="pink-color">
+              <label class="order__label" for="pink-color">Розовый</label>
+              <input class="order__checkbox" type="checkbox" name="orange-field" id="orange-color">
+              <label class="order__label" for="orange-color">Оранжевый</label>
+            </fieldset>
+            <fieldset class="order__wrapper">
+              <legend class="order__title">Фио</legend>
+              <label class="order__name" for="first-name">Имя:</label>
+              <input class="order__input" type="text" name="first-name" id="first-name" placeholder="Введите ваше имя" required>
+              <label class="order__name" for="surname">Фамилия:</label>
+              <input class="order__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию" required>
+              <label class="order__name" for="patronymic">Отчество:</label>
+              <input class="order__input" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете" required>
+            </fieldset>
+            <fieldset class="order__wrapper">
+              <legend class="order__title">Тел</legend>
+                <input class="order__input" type="tel" name="tel" pattern="+7-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="+7 ХХХ ХХ ХХ" required>
+            </fieldset>
+            <fieldset class="order__wrapper">
+              <legend class="order__title">E-mail</legend>
+                <input class="order__input" type="email" name="email" placeholder="Ваш Email" required>
+            </fieldset>
+            <fieldset class="order__wrapper">
+              <legend class="order__title">Доп</legend>
+                <textarea class="order__message" name="message" placeholder="Опишите все ваши пожелания к заказу" required></textarea>
+            </fieldset>
             <p class="form__note">Все поля обязательны для заполнения</p>
             <button class="btn  form__order" type="submit">Отправить заказ</button>
           </form>
@@ -82,17 +89,15 @@
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <p class="page-footer__social">
-          <span class="social-links">
-            <a class="social-link social-link--in" href="https://www.instagram.com/htmlacademy"></a>
-            <a class="social-link social-link--fb" href="https://www.facebook.com/htmlacademy"></a>
-            <a class="social-link social-link--tw" href="https://www.twitter.com/htmlacademy"></a>
-          </span>
-        </p>
-        <p class="page-footer__copyright">
-          Разработано
-          <a class="btn  page-footer__copyright-link" href="https://www.htmlacademy.ru"></a>
-        </p>
+        <div class="social">
+          <a class="social__link social__link--in" href="https://www.instagram.com/htmlacademy"></a>
+          <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy"></a>
+          <a class="social__link social__link--tw" href="https://www.twitter.com/htmlacademy"></a>
+        </div>
+      </div>
+      <div class="page-footer__copyright">
+        Разработано
+        <a class="page-footer__copyright-link" href="https://www.htmlacademy.ru"></a>
       </div>
     </footer>
   </body>
