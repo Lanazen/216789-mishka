@@ -29,19 +29,19 @@
 
     <main>
       <section class="catalog">
-        <div class="catalog-intro">
-          <h1 class="catalog-intro__title">Каталог товаров</h1>
+        <div class="intro">
+          <h1 class="intro__title">Каталог товаров</h1>
         </div>
         <div class="catalog__wrapper">
           <article class="catalog-item">
-            <a class="catalog-item__photo" href="">
+            <a class="catalog-item__photo" href="#">
               <img src="http://placehold.it/150x100" alt="Зайчик-попрыгайчик">
             </a>
             <div class="catalog-item__wrapper">
-              <a class="catalog-item__title" href="">Зайчик-попрыгайчик</a>
+              <a class="catalog-item__title" href="#">Зайчик-попрыгайчик</a>
               <p class="catalog-item__details">Рост 30 см, вес 200 г</p>
               <span class="catalog-item__price">1 200 руб.</span>
-              <a class="catalog-item__add" href=""></a>
+              <a class="catalog-item__add" href="#"></a>
             </div>
           </article>
           <article class="catalog-item">
@@ -49,10 +49,10 @@
               <img src="http://placehold.it/150x100" alt="Корзинка для белья">
             </a>
             <div class="catalog-item__wrapper">
-              <a class="catalog-item__title" href="">Корзинка для белья</a>
+              <a class="catalog-item__title" href="#">Корзинка для белья</a>
               <p class="catalog-item__details">Диаметр 15 см, высота 10 см</p>
               <span class="catalog-item__price">690 руб.</span>
-              <a class="catalog-item__add" href=""></a>
+              <a class="catalog-item__add" href="#"></a>
             </div>
           </article>
           <article class="catalog-item">
@@ -60,10 +60,10 @@
               <img src="http://placehold.it/150x100" alt="Корзинка для игрушек">
             </a>
             <div class="catalog-item__wrapper">
-              <a class="catalog-item__title" href="">Большая корзинка для игрушек</a>
+              <a class="catalog-item__title" href="#">Большая корзинка для игрушек</a>
               <p class="catalog-item__details">Диаметр 30 см, высота 30 см</p>
               <span class="catalog-item__price">1 500 руб.</span>
-              <a class="catalog-item__add" href=""></a>
+              <a class="catalog-item__add" href="#"></a>
             </div>
           </article>
         </div>
@@ -71,20 +71,26 @@
 
       <!--ADD TO BASKET-->
 
-      <section class="addition  addition--hidden">
-        <div class="addition__wrapper">
-          <form class="addition__form" action="https://echo.htmlacademy.ru" method="post">
-            <b class="addition__title">Добавить в корзину</b>
-            <fieldset class="size">
-              <legend class="size__select">Выберите размер:</legend>
-              <input class="size__input" type="radio" name="size-field" id="size-s" value="s" checked>
-              <label class="size__label  size__label--selected" for="size-s">S</label>
-              <input class="size__input" type="radio" name="size-field" id="size-m" value="m">
-              <label class="size__label" for="size-m">M</label>
-              <input class="size__input" type="radio" name="size-field" id="size-l" value="l">
-              <label class="size__label" for="size-l">L</label>
+      <section class="modal  modal--hidden">
+        <div class="modal__wrapper">
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <b class="modal__title">Добавить в корзину</b>
+            <fieldset class="form-block">
+              <span class="form-block__select">Выберите размер:</span>
+              <div class="form-field">
+                <input class="form-field__input" type="radio" name="size-field" id="size-s" value="s" checked>
+                <label class="form-field__label  form-field__label--selected" for="size-s">S</label>
+              </div>
+              <div class="form-field">
+                <input class="form-field__input" type="radio" name="size-field" id="size-m" value="m">
+                <label class="form-field__label" for="size-m">M</label>
+              </div>
+              <div class="form-field">
+                <input class="form-field__input" type="radio" name="size-field" id="size-l" value="l">
+                <label class="form-field__label" for="size-l">L</label>
+              </div>
             </fieldset>
-            <button class="btn  addition__size" type="submit">Добавить</button>
+            <button class="btn  modal__add" type="submit">Добавить</button>
           </form>
         </div>
       </section>
@@ -93,12 +99,12 @@
 
       <section class="process">
         <div class="process__wrapper">
-          <b class="process__title">Процесс производства</b>
+          <span class="process__title">Процесс производства</span>
         </div>
-        <video class="process__video  production" src="http://placehold.it" preload="metadata" width="400" height="225"></video>
+        <video class="process__video" src="http://placehold.it" preload="metadata" width="400" height="225"></video>
         <div class="process__wrapper">
           <p class="process__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-          <a class="btn  process__order" href="">Сделать заказ</a>
+          <a class="btn  process__order" href="#">Сделать заказ</a>
         </div>
       </section>
     </main>
@@ -112,10 +118,10 @@
           <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy"></a>
           <a class="social__link social__link--tw" href="https://www.twitter.com/htmlacademy"></a>
         </div>
-      </div>
-      <div class="page-footer__copyright">
-        Разработано
-        <a class="page-footer__copyright-link" href="https://www.htmlacademy.ru"></a>
+        <div class="page-footer__copyright">
+          Разработано
+          <a class="page-footer__copyright-link" href="https://www.htmlacademy.ru"></a>
+        </div>
       </div>
     </footer>
   </body>
