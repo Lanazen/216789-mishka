@@ -1,0 +1,23 @@
+.modal .form-field {
+  display: inline-block;
+  margin: 0;
+
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    display: block;
+    cursor: pointer;
+    padding: 18px 35px;
+    margin: 27px 7px 30px 0;
+    font-family: $font-open-sans-bold;
+    font-size: 17px;
+    outline: 2px solid $border-color;
+  }
+
+  /*&__label:last-child {
+    margin-right: 0;
+
+  }*/
+}

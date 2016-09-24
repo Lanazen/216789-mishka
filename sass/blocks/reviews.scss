@@ -1,0 +1,21 @@
+.reviews {
+  font-family: $font-open-sans;
+  color: $secondary-text-color;
+
+  &__wrapper {
+    margin: 65px 30px 45px;
+  }
+
+  &__title {
+    margin-bottom: 0;
+    font-family: $font-open-sans-bold;
+    color: $main-text-color;
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  &__write {
+    text-align: center;
+    vertical-align: middle;
+  }
+}

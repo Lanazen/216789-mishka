@@ -1,0 +1,21 @@
+.page-footer {
+  margin: 0;
+  padding: 0 0 23px;
+  background-color: $secondary-bg-color;
+  font-family: $font-open-sans-bold;
+  color: $main-text-color;
+  text-align: center;
+
+  &__copyright {
+    margin-top: 0;
+    font-size: 19px;
+  }
+
+  &__copyright-link {
+    display: inline-block;
+    margin: 10px 0 0 30px;
+    background: url(/img/logo-htmlacademy.svg) no-repeat 50% 50%;
+    width: 27px;
+    height: 35px;
+  }
+}

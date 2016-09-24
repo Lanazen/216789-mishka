@@ -1,0 +1,52 @@
+.form .form-field {
+  display: block;
+  margin-bottom: 35px;
+
+  &__input {
+    display: none;
+  }
+}
+
+.form-field input[type="radio"] + label,
+.form-field input[type="checkbox"] + label {
+  display: inline-block;
+  position: relative;
+  margin-left: 60px;
+  font-family: $font-open-sans-bold;
+  font-size: 17px;
+}
+
+.form-field input[type="radio"] + label:before,
+.form-field input[type="checkbox"] + label:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: -10px;
+  left: -60px;
+  width: 35px;
+  height: 35px;
+  border: 2px solid $secondary-text-color;
+  border-radius: 50%;
+  cursor: pointer;
+  }
+
+.form-field input[type="checkbox"] + label:before {
+  border-radius: 0%;
+}
+
+.form-field input[type="text"] + label {
+  display: inline-block;
+  position: relative;
+  font-family: $font-open-sans-bold;
+  font-size: 17px;
+}
+
+.form-field input[type="text"] + label:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-bottom: 2px solid $secondary-text-color;
+  cursor: pointer;
+}

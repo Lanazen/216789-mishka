@@ -1,0 +1,30 @@
+.category {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    padding: 30px;
+    text-align: left;
+
+    &--interior {
+      background-color: $main-color;
+      background-image: url(/img/icon-interior.svg);
+      background-repeat: no-repeat;
+    }
+
+    &--toys {
+      background-color: $secondary-color;
+      background-image: url(/img/icon-toy.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__item a {
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    display: block;
+    height: 100%;
+    }
+}

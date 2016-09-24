@@ -1,0 +1,38 @@
+.slider-item {
+  display: block;
+
+  &__text {
+    font-size: 15px;
+    margin: 0;
+    padding: 38px 0 40px;
+    line-height: 2;
+  }
+
+  &__author {
+    font-family: $font-open-sans-bold;
+    color: $main-text-color;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  &__nick {
+    font-size: 18px;
+  }
+
+  &__prev {
+    width: 49%;
+    min-height: 50px;
+    margin: 35px 0 37px;
+    text-align: center;
+    outline: 1px solid $border-color;
+    background: url(/img/icon-left-arrow.svg) no-repeat 50% 50%;
+  }
+
+  &__next {
+    width: 49%;
+    min-height: 50px;
+    margin: 35px 0 37px;
+    outline: 1px solid $border-color;
+    background: url(/img/icon-right-arrow.svg) no-repeat 50% 50%;
+  }
+}
