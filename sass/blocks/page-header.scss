@@ -1,10 +1,10 @@
 .page-header {
+  min-width: 320px;
   margin: 0 auto;
   padding: 0 auto;
-  min-width: 320px;
-  background-color: $main-bg-color;
   font-family: $font-open-sans-bold;
   text-align: center;
+  background-color: $main-bg-color;
 
   &__wrapper {
     margin: 0px;
@@ -14,7 +14,7 @@
 
   &__logo {
     display: inline-block;
-    padding-top: 22px;
     min-height: 35px;
+    padding-top: 22px;
   }
 }

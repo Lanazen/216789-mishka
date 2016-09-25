@@ -1,8 +1,8 @@
 body {
-  background-color: $main-bg-color;
-  color: $main-text-color;
-  font-family: $font-open-sans;
+  min-width: 320px;
   margin: 0;
   padding: 0;
-  min-width: 320px;
+  font-family: $font-open-sans;
+  background-color: $main-bg-color;
+  color: $main-text-color;
 }

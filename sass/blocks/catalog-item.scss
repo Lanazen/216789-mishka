@@ -1,7 +1,13 @@
 .catalog-item {
-  padding: 0;
   margin: 0;
+  padding: 0;
   outline: 1px solid $border-color;
+
+  &__photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 
   &__wrapper {
     margin-bottom: 30px;
@@ -10,29 +16,29 @@
 
   &__title {
     font-family: $font-open-sans-bold;
-    color: $main-text-color;
     font-size: 17px;
     text-decoration: none;
+    color: $main-text-color;
     }
 
   &__details {
-    padding-bottom: 28px;
     margin-bottom: 28px;
+    padding-bottom: 28px;
     border-bottom: 1px solid $border-color;
 
   }
 
   &__price {
     font-family: $font-open-sans-bold;
-    color: $main-text-color;
     font-size: 15px;
+    color: $main-text-color;
   }
 
   &__add {
     display: block;
-    background: url(/img/icon-cart.svg) no-repeat;
+    float: right;
     width: 21px;
     height: 19px;
-    float: right;
+    background: url(/img/icon-cart.svg) no-repeat;
   }
 }

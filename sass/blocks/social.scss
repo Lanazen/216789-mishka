@@ -4,25 +4,25 @@
   border-bottom: 1px solid #e5e5e5;
 
   &__link {
-    margin: 20px;
     display: inline-block;
+    margin: 20px;
   }
 
   &__link--in {
-    background: url(/img/icon-insta.svg) no-repeat 50% 50%;
     width: 22px;
     height: 22px;
+    background: url(/img/icon-insta.svg) no-repeat 50% 50%;
   }
 
   &__link--fb {
-    background: url(/img/icon-fb.svg) no-repeat 50% 50%;
     width: 15px;
     height: 28px;
+    background: url(/img/icon-fb.svg) no-repeat 50% 50%;
   }
 
   &__link--tw {
-    background: url(/img/icon-twitter.svg) no-repeat 50% 50%;
     width: 24px;
     height: 21px;
+    background: url(/img/icon-twitter.svg) no-repeat 50% 50%;
   }
 }

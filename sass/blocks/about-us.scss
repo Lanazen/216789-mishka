@@ -7,14 +7,14 @@
   }
 
   &__title {
+    margin: 0;
     font--size: 25px;
     line-height: 25px;
-    margin: 0;
   }
 
   &__list {
-    list-style: none;
     padding: 0;
+    list-style: none;
   }
 
   &__item {

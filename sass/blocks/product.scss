@@ -1,6 +1,6 @@
 .product {
-  text-align: left;
   font-family: $font-open-sans;
+  text-align: left;
   color: $secondary-text-color;
 
   &__wrapper {
@@ -19,8 +19,8 @@
     font-family: $font-open-sans-bold;
     font-size: 17px;
     line-height: 17px;
-    color: $main-color;
     text-transform: uppercase;
+    color: $main-color;
   }
 
   &__description {
@@ -31,9 +31,9 @@
 
   &__features {
     margin-top: 34px;
-    border-collapse: collapse;
     font-size: 15px;
     line-height: 15px;
+    border-collapse: collapse;
   }
 
   &__attribute {
@@ -46,17 +46,18 @@
     border-bottom: 1px solid $border-color;
   }
 
-  &__photo {
+  &__photo img {
+    display: block;
+    width: 100%;
+    height: auto;
     margin: 27px 0 28px 0;
-    width: 260px;
-    height: 315px;
   }
 
   &__price {
-    text-align: center;
     font-family: $font-open-sans-bold;
     font-size: 17px;
     line-height: 17px;
+    text-align: center;
   }
 
   &__order {

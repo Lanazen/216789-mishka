@@ -1,4 +1,4 @@
-.reviews {
+.slider {
   font-family: $font-open-sans;
   color: $secondary-text-color;
 
@@ -9,9 +9,9 @@
   &__title {
     margin-bottom: 0;
     font-family: $font-open-sans-bold;
-    color: $main-text-color;
     font-size: 25px;
     line-height: 25px;
+    color: $main-text-color;
   }
 
   &__write {
