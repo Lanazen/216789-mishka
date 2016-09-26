@@ -1,0 +1,21 @@
+.map {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.map::after {
+  content: "";
+  position: absolute;
+  top: 38%;
+  left: 38%;
+  width: 66px;
+  height: 101px;
+  background: url(/img/icon-map-pin.svg) no-repeat 50% 50%;
+}
+
+.map img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

@@ -1,0 +1,25 @@
+.form-block {
+  padding-left: 0;
+  border: none;
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 28px;
+    padding-left: 0;
+    text-transform: uppercase;
+    color: $main-color;
+  }
+
+  &__title--text {
+    margin-bottom: 6px;
+  }
+
+  &__select {
+    display: block;
+    margin-top: 20px;
+    font-family: $font-open-sans;
+    font-size: 15px;
+    line-height: 15px;
+    color: $secondary-text-color;
+  }
+}

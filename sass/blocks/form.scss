@@ -1,0 +1,25 @@
+.form {
+  font-family: $font-open-sans-bold;
+  text-align: left;
+  color: $main-text-color;
+
+  &__wrapper {
+    margin: 25px 30px 55px;
+  }
+
+  &__description {
+    font-family: $font-open-sans;
+    font-size: 13px;
+    line-height: 2;
+    color: $secondary-text-color;
+  }
+
+  &__note {
+    margin-top: -35px;
+    margin-bottom: 20px;
+    font-family: $font-open-sans;
+    font-size: 14px;
+    text-align: center;
+    color: $secondary-text-color;
+  }
+}

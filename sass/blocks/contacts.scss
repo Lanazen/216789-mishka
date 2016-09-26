@@ -1,0 +1,32 @@
+.contacts {
+  font-family: $font-open-sans;
+  font-size: 15px;
+  color: $secondary-text-color;
+
+  &__wrapper {
+    margin: 45px 30px 42px;
+  }
+
+  &__title {
+    font-family: $font-open-sans-bold;
+    font-size: 18px;
+    color: $main-text-color;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+  }
+
+  &__type {
+    padding-right: 32px;
+  }
+
+  &__address {
+    display: inline-block;
+    width: 150px;
+    font-size: 15px;
+    line-height: 2;
+    text-decoration: none;
+    color: $secondary-text-color;
+  }
+}

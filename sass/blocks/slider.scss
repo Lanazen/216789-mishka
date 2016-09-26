@@ -1,0 +1,21 @@
+.slider {
+  font-family: $font-open-sans;
+  color: $secondary-text-color;
+
+  &__wrapper {
+    margin: 65px 30px 45px;
+  }
+
+  &__title {
+    margin-bottom: 0;
+    font-family: $font-open-sans-bold;
+    font-size: 25px;
+    line-height: 25px;
+    color: $main-text-color;
+  }
+
+  &__write {
+    text-align: center;
+    vertical-align: middle;
+  }
+}

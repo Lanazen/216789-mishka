@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+      <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
@@ -10,36 +11,29 @@
 
     <header class="page-header">
       <div class="page-header__logo">
-        <img src="http://placehold.it/150x100" alt="Мишка">
+        <img src="img/logo-mobile.svg" width="85" height="35" alt="MISHKA">
       </div>
       <nav class="main-nav main-nav--closed">
         <button class="main-nav__toggle" type="button"></button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item"><a href="#">Каталог товаров</a></li>
-            <li class="main-nav__item"><a href="#">Вязание на заказ</a></li>
-            <li class="main-nav__item"><a href="#">Поиск по сайту</a></li>
-            <li class="main-nav__item"><a href="#">Корзина: пока пуста</a></li>
-          </ul>
-        </div>
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a href="#">Каталог товаров</a></li>
+          <li class="main-nav__item"><a href="#">Вязание на заказ</a></li>
+          <li class="main-nav__item"><a href="#">Поиск по сайту</a></li>
+          <li class="main-nav__item"><a href="#">Корзина: пока пуста</a></li>
+        </ul>
       </nav>
+      <div class="intro  intro--index">
+        <h1 class="intro__header">Милые штуки ручной работы для дома</h1>
+      </div>
+      <ul class="category">
+        <li class="category__item  category__item--interior"><a href="#">Предметы  интерьера</a></li>
+        <li class="category__item  category__item--toys"><a href="#">Детские  игрушки</a></li>
+      </ul>
     </header>
 
-    <!--CATEGORY OF GOODS-->
+    <!--PRODUCT OF WEEK-->
 
-    <main>
-      <section class="category">
-        <div class="intro  intro--index">
-          <h1 class="intro-index__title">Милые штуки ручной работы для дома</h1>
-        </div>
-        <ul class="category__list">
-          <li class="category__item"><a href="#">Предметы  интерьера</a></li>
-          <li class="category__item"><a href="#">Детские  игрушки</a></li>
-        </ul>
-      </section>
-
-      <!--PRODUCT OF WEEK-->
-
+    <main class="page-main">
       <section class="product">
         <div class="product__wrapper">
           <h2 class="product__title">Вязаные корзинки</h2>
@@ -60,7 +54,7 @@
             </tr>
           </table>
           <div class="product__photo">
-            <img src="http://placehold.it/150x100" alt="Товар недели">
+            <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Товар недели">
           </div>
           <p class="product__price">Цена: 990 руб.</p>
           <a class="btn  product__order" href="#">Заказать</a>
@@ -99,21 +93,21 @@
         <div class="about-us__wrapper">
           <h2 class="about-us__title">Коротко о нас:</h2>
           <ul class="about-us__list">
-            <li class="about-us__item  about-us__item--clean">Экологически  чистые материалы</li>
-            <li class="about-us__item  about-us__item--style">Скандинавский стиль  по российской цене</li>
+            <li class="about-us__item  about-us__item--clean">Экологически чистые материалы</li>
+            <li class="about-us__item  about-us__item--style">Скандинавский стиль по российской цене</li>
             <li class="about-us__item  about-us__item--like">Увеличивает лайки на фотографиях</li>
-            <li class="about-us__item  about-us__item--love">Связано вручную с  любовью и умилением</li>
+            <li class="about-us__item  about-us__item--love">Связано вручную с любовью и умилением</li>
             <li class="about-us__item  about-us__item--support">Поддержка отечественного производителя</li>
-            <li class="about-us__item  about-us__item--gift">Поставляется в  подарочной упаковке</li>
+            <li class="about-us__item  about-us__item--gift">Поставляется в подарочной упаковке</li>
           </ul>
         </div>
       </section>
 
-      <!--REVIEWS-->
+      <!--SLIDER-->
 
-      <section class="reviews">
-        <div class="reviews__wrapper">
-          <h2 class="reviews__title">Отзывы</h2>
+      <section class="slider">
+        <div class="slider__wrapper">
+          <h2 class="slider__title">Отзывы</h2>
           <div class="slider-item">
             <p class="slider-item__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильнее, а также набирают больше лайков!</p>
             <p class="slider-item__author">Анастасия Красильникова</p>
@@ -121,7 +115,7 @@
           </div>
           <button class="slider-item__prev" type="button"></button>
           <button class="slider-item__next" type="button"></button>
-          <a class="reviews__write  btn" href="#">Написать</a>
+          <a class="slider__write  btn" href="#">Написать</a>
         </div>
       </section>
 
@@ -141,7 +135,7 @@
         </div>
       </section>
       <div class="map">
-        <img src="http://placehold.it/150x100" alt="Где мы находимся">
+        <img src="img/map-mobile@1x.jpg" width="320" height="455" alt="Где мы находимся">
       </div>
       <div class="write-us">
         <a class="btn  write-us__btn" href="#">Напишите нам</a>

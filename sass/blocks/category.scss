@@ -1,0 +1,26 @@
+.category {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    padding: 30px;
+    text-align: left;
+
+    &--interior {
+      background: $main-color  url(/img/icon-interior.svg) no-repeat 91% 50%;
+    }
+
+    &--toys {
+      background: $secondary-color url(/img/icon-toy.svg) no-repeat 93% 50%;
+    }
+  }
+
+  &__item a {
+    margin: 0;
+    padding: 0;
+    font-size: 19px;
+    text-decoration: none;
+    color: $main-bg-color;
+  }
+}

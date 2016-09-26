@@ -1,0 +1,20 @@
+.page-header {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 auto;
+  font-family: $font-open-sans-bold;
+  text-align: center;
+  background-color: $main-bg-color;
+
+  &__wrapper {
+    margin: 0px;
+    line-height: 80px;
+    outline: 1px solid $border-color;
+  }
+
+  &__logo {
+    display: inline-block;
+    min-height: 35px;
+    padding-top: 22px;
+  }
+}

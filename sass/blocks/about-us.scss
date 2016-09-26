@@ -1,0 +1,48 @@
+.about-us {
+  font-family: $font-open-sans-bold;
+  color: $main-text-color;
+
+  &__wrapper {
+    margin: 33px 30px;
+  }
+
+  &__title {
+    margin: 0;
+    font--size: 25px;
+    line-height: 25px;
+  }
+
+  &__list {
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    padding-top: 85px;
+    font-size: 17px;
+  }
+
+  &__item--clean {
+    background: url(/img/icon-feature-1.svg) no-repeat 0% 35%;
+  }
+
+  &__item--style {
+    background: url(/img/icon-feature-3.svg) no-repeat 0% 35%;
+  }
+
+  &__item--like {
+    background: url(/img/icon-feature-5.svg) no-repeat 0% 35%;
+  }
+
+  &__item--love {
+    background: url(/img/icon-feature-2.svg) no-repeat 0% 35%;
+  }
+
+  &__item--support {
+    background: url(/img/icon-feature-4.svg) no-repeat 0% 35%;
+  }
+
+  &__item--gift {
+    background: url(/img/icon-feature-6.svg) no-repeat 0% 35%;
+  }
+}

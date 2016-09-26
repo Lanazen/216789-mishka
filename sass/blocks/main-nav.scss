@@ -1,0 +1,26 @@
+.main-nav {
+  display: block;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin: 0;
+    padding: 30px;
+    outline: 1px solid $border-color;
+  }
+
+  &__item a {
+    font-size: 17px;
+    list-style: none;
+    text-decoration: none;
+    color: $main-text-color;
+  }
+
+  /*&--closed {
+    display: none;
+  }*/
+}
