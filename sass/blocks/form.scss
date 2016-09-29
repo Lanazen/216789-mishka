@@ -23,3 +23,32 @@
     color: $secondary-text-color;
   }
 }
+
+@media ($tablet-widths) {
+  .form {
+
+    &__wrapper {
+      margin: 0;
+      padding: 85px 50px 55px;
+    }
+
+    &__description {
+      font-size: 17px;
+    }
+
+    &__note {
+      font-size: 17px;
+      float: right;
+      padding-top: 70px;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .form {
+
+    &__wrapper {
+      padding: 135px 225px 100px 105px;
+    }
+  }
+}

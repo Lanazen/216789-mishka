@@ -6,6 +6,10 @@
   background-color: $secondary-bg-color;
   color: $main-text-color;
 
+  &__logo {
+    display: none;
+  }
+
   &__copyright {
     margin-top: 0;
     font-size: 19px;
@@ -17,5 +21,41 @@
     height: 35px;
     margin: 10px 0 0 30px;
     background: url(/img/logo-htmlacademy.svg) no-repeat 50% 50%;
+  }
+}
+
+@media ($tablet-widths) {
+  .page-footer {
+
+    &__wrapper {
+      margin: 0 50px -22px;
+      padding: 32px 0;
+    }
+
+    &__logo {
+      display: inline-block;
+      float: left;
+      padding-top: 20px;
+    }
+
+    &__copyright {
+      display: inline-block;
+      float: right;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .page-footer {
+
+    &__wrapper {
+      margin: 0 50px -22px;
+      padding: 32px 0;
+    }
+
+    &__copyright {
+      float: right;
+      margin-right: 0;
+    }
   }
 }

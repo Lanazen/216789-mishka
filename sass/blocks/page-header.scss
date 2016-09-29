@@ -15,6 +15,32 @@
   &__logo {
     display: inline-block;
     min-height: 35px;
-    padding-top: 22px;
+    padding: 22px;
+  }
+}
+
+@media ($tablet-widths) {
+
+  .page-header {
+    min-height: 89px;
+
+    &__wrapper {
+      margin: 0 50px;
+    }
+
+    &__logo {
+      padding-left: 50px;
+      float: left;
+      min-height: 50px;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .page-header {
+
+    &__logo {
+      float: none;
+    }
   }
 }

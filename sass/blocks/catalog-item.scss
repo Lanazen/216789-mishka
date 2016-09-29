@@ -42,3 +42,61 @@
     background: url(/img/icon-cart.svg) no-repeat;
   }
 }
+
+@media ($tablet-widths) {
+  .catalog-item {
+    display: block;
+    height: 334px;
+    margin-bottom: 30px;
+
+    &__photo img {
+      float: left;
+      width: 334px;
+      height: 334px;
+    }
+
+    &__wrapper {
+      padding: 30px 30px 30px 364px;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__details {
+      padding-bottom: 155px;
+    }
+
+    &__price {
+      font-size: 17px;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .catalog-item {
+    display: inline-block;
+    min-width: 315px;
+    height: /*660px*/auto;
+    margin-right: 50px;
+
+    &__photo img {
+      float: none;
+      width: 315px;
+      height: /*462px*/auto;
+    }
+
+    &__wrapper {
+      padding: 30px;
+    }
+  }
+
+  .catalog-item:last-child {
+    width: 315px;
+    margin-right: 0;
+  }
+
+  .catalog-item:last-child .catalog-item__details {
+    padding-bottom: 128px;
+  }
+}

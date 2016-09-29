@@ -8,3 +8,22 @@
     margin: 30px 30px 0;
   }
 }
+
+@media ($tablet-widths) {
+  .catalog {
+    font-size: 15px;
+
+    &__wrapper {
+      margin: 85px 50px 0;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .catalog {
+
+    &__wrapper {
+      margin: 130px 50px 60px;
+    }
+  }
+}

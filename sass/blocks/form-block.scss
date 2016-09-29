@@ -23,3 +23,28 @@
     color: $secondary-text-color;
   }
 }
+
+@media ($tablet-widths) {
+  .form-block {
+
+    &__title {
+      margin-top: 50px;
+      margin-bottom: 0;
+    }
+
+    &__select {
+      font-size: 17px;
+      line-height: 17px;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .form-block {
+
+    &__select {
+      font-size: 17px;
+      line-height: 17px;
+    }
+  }
+}

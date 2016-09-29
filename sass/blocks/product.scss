@@ -26,7 +26,7 @@
   &__description {
     margin-top: 33px;
     font-size: 15px;
-    line-height: 15px;
+    line-height: 25px;
   }
 
   &__features {
@@ -67,4 +67,98 @@
   }
 }
 
+@media ($tablet-widths) {
+  .product {
 
+    &__wrapper {
+      margin: 55px 50px;
+    }
+
+    &__title {
+      margin-bottom: 60px;
+      font-size: 43px;
+      line-height: 43px;
+    }
+
+    &__intro {
+      display: inline-block;
+      float: right;
+      width: 75px;
+      margin-top: -95px;
+      text-align: center;
+    }
+
+    &__description {
+      display: block;
+      width: 43%;
+      font-size: 17px;
+      line-height: 29px;
+    }
+
+    &__features {
+      width: 43%;
+      margin-bottom: 60px;
+      font-size: 17px;
+      line-height: 17px;
+    }
+
+    &__photo img {
+      display: block;
+      float: right;
+      width: /*50%*/334px;
+      height: /*auto*/ 405px;
+      margin: -290px 0 55px 0;
+    }
+
+    &__price {
+      @include center;
+      font-size: 20px;
+      line-height: 20px;
+  }
+
+    &__order {
+      @include center;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .product {
+
+    &__title {
+      margin: 130px 0 60px 225px;
+      font-size: 53px;
+      line-height: 53px;
+    }
+
+    &__intro {
+      float: left;
+      margin-left: 50px;
+    }
+
+    &__description {
+      margin-left: 50px;
+    }
+
+    &__features {
+      margin-left: 50px;
+      margin-bottom: 115px;
+    }
+
+    &__photo img {
+      width: 525px;
+      height: 635px;
+      margin: -490px 0 55px 0;
+    }
+
+    &__price {
+      margin-left: 50px;
+      margin-bottom: 35px;
+  }
+
+    &__order {
+      margin-left: 185px;
+      margin-bottom: 75px;
+    }
+  }
+}

@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
       <link rel="stylesheet" href="css/style.css">
   </head>
@@ -18,11 +19,15 @@
         <ul class="main-nav__list">
           <li class="main-nav__item"><a href="#">Каталог товаров</a></li>
           <li class="main-nav__item"><a href="#">Вязание на заказ</a></li>
-          <li class="main-nav__item"><a href="#">Поиск по сайту</a></li>
-          <li class="main-nav__item"><a href="#">Корзина: пока пуста</a></li>
+          <li class="main-nav__item  main-nav__item--search"><a href="#">Поиск по сайту</a></li>
+          <li class="main-nav__item  main-nav__icon-search"><a href="#"></a></li>
+          <li class="main-nav__item  main-nav__item--cart"><a href="#">Корзина: пока пуста</a></li>
+          <li class="main-nav__item  main-nav__item--desktop"><a href="#">Новые поступления</a></li>
+          <li class="main-nav__item  main-nav__item--desktop"><a href="#">Распродажа</a></li>
         </ul>
       </nav>
       <div class="intro">
+        <span class="intro__note">Бесплатная доставка по России</span>
         <h1 class="intro__header">Вязание на заказ</h1>
       </div>
     </header>
@@ -38,22 +43,22 @@
               <span class="form-block__title">Тип</span>
               <div class="form-field">
                 <input class="form-field__input  form-field__input--radio" type="radio" name="type-field" id="interior-field" value="interior" checked>
-                <label class="form-field__label  form-field__label--radio  form-field__label--selected" for="interior-field">Аксессуар для  интерьера</label>
+                <label class="form-field__label  form-field__label--radio" for="interior-field">Аксессуар для  интерьера</label>
               </div>
               <div class="form-field">
                 <input class="form-field__input  form-field__input--radio" type="radio" name="type-field" id="toy-field" value="toy">
                 <label class="form-field__label  form-field__label--radio" for="toy-field">Детская игрушка</label>
               </div>
             </fieldset>
-            <fieldset class="form-block">
+            <fieldset class="form-block  form-block--colored">
               <span class="form-block__title">Цвет</span>
               <div class="form-field">
                 <input class="form-field__input  form-field__input--checkbox" type="checkbox" name="white-field" id="white-color" checked>
-                <label class="form-field__label  form-field__label--checkbox  form-field__label--selected" for="white-color">Белый</label>
+                <label class="form-field__label  form-field__label--checkbox" for="white-color">Белый</label>
               </div>
               <div class="form-field">
                 <input class="form-field__input  form-field__input--checkbox" type="checkbox" name="gray-field" id="gray-color" checked>
-                <label class="form-field__label  form-field__label--checkbox  form-field__label--selected" for="gray-color">Серый</label>
+                <label class="form-field__label  form-field__label--checkbox" for="gray-color">Серый</label>
               </div>
               <div class="form-field">
                 <input class="form-field__input  form-field__input--checkbox" type="checkbox" name="tiffany-field" id="tiffany-color">
@@ -87,13 +92,13 @@
                 <input class="form-field__input--text" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете" required>
               </div>
             </fieldset>
-            <fieldset class="form-block">
+            <fieldset class="form-block  form-block--colored">
               <span class="form-block__title  form-block__title--text">Тел</span>
               <div class="form-field  form-field--text">
                 <input class="form-field__input--text  form-field__input--phone" type="tel" name="tel" pattern="+7-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="+7 ХХХ ХХ ХХ" required>
               </div>
             </fieldset>
-            <fieldset class="form-block">
+            <fieldset class="form-block  form-block--colored">
               <span class="form-block__title  form-block__title--text">E-mail</span>
               <div class="form-field  form-field--text">
                 <input class="form-field__input--text  form-field__input--mail" type="email" name="email" placeholder="Ваш Email" required>
@@ -116,6 +121,9 @@
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
+        <div class="page-footer__logo">
+          <img src="img/logo-mobile.svg" width="85" height="35" alt="MISHKA">
+        </div>
         <div class="social">
           <a class="social__link social__link--in" href="https://www.instagram.com/htmlacademy"></a>
           <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy"></a>

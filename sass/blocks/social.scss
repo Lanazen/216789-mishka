@@ -26,3 +26,20 @@
     background: url(/img/icon-twitter.svg) no-repeat 50% 50%;
   }
 }
+
+@media ($tablet-widths) {
+  .social {
+    display: inline-block;
+    margin-left: 120px;
+    padding: 0;
+    text-align: center;
+    border-bottom: none;
+  }
+}
+
+@media ($desktop-widths) {
+  .social {
+    margin-left: 200px;
+    text-align: center;
+  }
+}

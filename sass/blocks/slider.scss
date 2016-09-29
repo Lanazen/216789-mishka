@@ -19,3 +19,43 @@
     vertical-align: middle;
   }
 }
+
+@media ($tablet-widths) {
+  .slider {
+    position: relative;
+    height: 457px;
+    background: url(/img/review@1x.jpg) no-repeat 0% 20%;
+
+    &__wrapper {
+      margin: 0px 50px 70px;
+    }
+
+    &__title {
+      padding-top: 85px;
+      font-size: 43px;
+      line-height: 43px;
+    }
+
+    &__write {
+      position: absolute;
+      top: 90px;
+      right: 50px;
+      width: 175px;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .slider {
+    background: url(/img/review@1x.jpg) no-repeat 5% 20%;
+
+    &__wrapper {
+      margin: 0 50px 70px 225px;
+    }
+
+    &__title {
+      font-size: 53px;
+      line-height: 53px;
+    }
+  }
+}

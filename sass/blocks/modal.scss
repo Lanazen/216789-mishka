@@ -26,3 +26,26 @@
     border: 2px solid transparent;
   }
 }
+
+@media ($tablet-widths) {
+  .modal {
+    @include container;
+    width: 567px;
+    text-align: center;
+
+    &__title {
+      font-size: 30px;
+      line-height: 30px;
+    }
+
+    &__add {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .modal {
+     width: 567px;
+  }
+}

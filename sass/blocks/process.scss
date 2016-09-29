@@ -3,7 +3,7 @@
   font-family: $font-open-sans;
   text-align: left;
   color: $secondary-text-color;
-  outline: 1px solid $border-color;
+  border: 1px solid $border-color;
 
   &__wrapper {
     padding: 33px 33px 32px;
@@ -43,6 +43,68 @@
 
   &__order {
     text-align: center;
-    vertical-align: middle;
+  }
+}
+
+@media ($tablet-widths) {
+  .process {
+    position: relative;
+    margin: 50px;
+
+    &__video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+    }
+
+    &__title {
+      margin-top: 400px;
+      font-size: 20px;
+      background: url(/img/icon-video.svg) no-repeat 1% 100%;
+    }
+
+    &__description {
+      font-size: 15px;
+    }
+
+    &__order {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .process {
+    margin-bottom: 110px;
+
+    &__video {
+      top: 0;
+      right: 100px;
+      height: 455px;
+      width: 680px;
+    }
+
+    &__wrapper {
+      margin-bottom: 10px;
+    }
+
+    &__title {
+      margin-left: 640px;
+      margin-top: 0;
+      padding-top: 100px;
+      background: url(/img/icon-video.svg) no-repeat 15% 50%;
+    }
+
+    &__description {
+      margin-left: 700px;
+    }
+
+    &__order {
+      margin-left: 750px;
+      width: 230px;
+    }
   }
 }

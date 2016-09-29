@@ -24,3 +24,24 @@
     color: $main-bg-color;
   }
 }
+
+@media ($tablet-widths) {
+  .category {
+
+    &__item {
+      display: inline-block;
+      min-width: /*334px*/40%;
+      height: 107px;
+      margin: 0;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .category {
+
+    &__item {
+      height: 100px;
+    }
+  }
+}

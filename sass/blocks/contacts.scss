@@ -15,18 +15,73 @@
 
   &__item {
     margin-bottom: 10px;
+    padding: 0;
   }
 
   &__type {
     padding-right: 32px;
+    vertical-align: top;
   }
 
   &__address {
     display: inline-block;
     width: 150px;
+    margin-top: -5px;
     font-size: 15px;
     line-height: 2;
     text-decoration: none;
     color: $secondary-text-color;
+  }
+}
+
+@media ($tablet-widths) {
+  .contacts {
+    font-size: 17px;
+    background: url(/img/icon-flag.svg) no-repeat;
+    background-position: 93% 0%;
+
+    &__wrapper {
+      margin: 75px 50px 0;
+    }
+
+    &__title {
+      font-size: 43px;
+    }
+
+    &__item {
+      display: inline-block;
+      width: 300px;
+      margin-right: 30px;
+      font-size: 17px;
+    }
+
+    &__address {
+      vertical-align: top;
+      font-size: 17px;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .contacts {
+    background-position: 9% 0%;
+
+    &__wrapper {
+      margin: 70px 50px 105px 225px;
+    }
+
+    &__title {
+      margin-top: 150px;
+      font-size: 53px;
+    }
+
+    &__item {
+      display: block;
+      margin-bottom: 50px;
+    }
+
+    &__address {
+      width: 200px;
+    }
   }
 }
