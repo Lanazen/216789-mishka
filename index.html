@@ -11,23 +11,26 @@
     <!--NAVIGATION-->
 
     <header class="page-header">
-      <div class="page-header__logo">
-        <img src="img/logo-mobile.svg" width="85" height="35" alt="MISHKA">
-      </div>
       <nav class="main-nav main-nav--closed">
         <button class="main-nav__toggle" type="button"></button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item"><a href="#">Каталог товаров</a></li>
-          <li class="main-nav__item"><a href="#">Вязание на заказ</a></li>
-          <li class="main-nav__item  main-nav__item--search"><a href="#">Поиск по сайту</a></li>
-          <li class="main-nav__item  main-nav__icon-search"><a href="#"></a></li>
-          <li class="main-nav__item  main-nav__item--cart"><a href="#">Корзина: пока пуста</a></li>
-          <li class="main-nav__item  main-nav__item--desktop"><a href="#">Новые поступления</a></li>
-          <li class="main-nav__item  main-nav__item--desktop"><a href="#">Распродажа</a></li>
-        </ul>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__logo  main-nav__item">
+              <img src="img/logo-mobile.svg" width="85" height="35" alt="MISHKA">
+            </li>
+            <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
+            <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
+            <li class="main-nav__item  main-nav__item--search">
+              <a href="#">Поиск по сайту</a>
+            </li>
+            <li class="main-nav__item  main-nav__item--cart"><a href="#">Корзина: пока пуста</a></li>
+            <li class="main-nav__item  main-nav__item--desktop"><a href="#">Новые поступления</a></li>
+            <li class="main-nav__item  main-nav__item--desktop"><a href="#">Распродажа</a></li>
+            <li class="main-nav__item  main-nav__item--tablet">Бесплатная доставка по России</li>
+          </ul>
+        </div>
       </nav>
       <div class="intro  intro--index">
-        <span class="intro__note">Бесплатная доставка по России</span>
         <h1 class="intro__header  intro__header--index">Милые штуки ручной работы для дома</h1>
       </div>
       <ul class="category">
@@ -43,6 +46,7 @@
         <div class="product__wrapper">
           <h2 class="product__title">Вязаные корзинки</h2>
           <span class="product__intro">Товар недели</span>
+          <div class="product__inner  product__inner--details">
           <p class="product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
           <table class="product__features">
             <tr>
@@ -58,33 +62,36 @@
               <td class="product__field">15 см</td>
             </tr>
           </table>
+          </div>
           <div class="product__photo">
             <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Товар недели">
           </div>
+          <div class="product__inner  product__inner--order">
           <p class="product__price">Цена: 990 руб.</p>
           <a class="btn  product__order" href="#">Заказать</a>
+          </div>
         </div>
       </section>
 
-      <!--ADD TO BASKET-->
+      <!--MODAL-->
 
       <section class="modal  modal--hidden">
         <div class="modal__wrapper">
           <form action="https://echo.htmlacademy.ru" method="post">
             <b class="modal__title">Добавить в корзину</b>
-            <fieldset class="form-block">
-              <span class="form-block__select">Выберите размер:</span>
-              <div class="form-field">
-                <input class="form-field__input" type="radio" name="size-field" id="size-s" value="s" checked>
-                <label class="form-field__label  form-field__label--selected" for="size-s">S</label>
+            <fieldset class="modal-block">
+              <span class="modal-block__select">Выберите размер:</span>
+              <div class="modal-field">
+                <input class="modal-field__input" type="radio" name="size-field" id="size-s" value="s" checked>
+                <label class="modal-field__label  form-field__label--selected" for="size-s">S</label>
               </div>
-              <div class="form-field">
-                <input class="form-field__input" type="radio" name="size-field" id="size-m" value="m">
-                <label class="form-field__label" for="size-m">M</label>
+              <div class="modal-field">
+                <input class="modal-field__input" type="radio" name="size-field" id="size-m" value="m">
+                <label class="modal-field__label" for="size-m">M</label>
               </div>
-              <div class="form-field">
-                <input class="form-field__input" type="radio" name="size-field" id="size-l" value="l">
-                <label class="form-field__label" for="size-l">L</label>
+              <div class="modal-field">
+                <input class="modal-field__input" type="radio" name="size-field" id="size-l" value="l">
+                <label class="modal-field__label" for="size-l">L</label>
               </div>
             </fieldset>
             <button class="btn  modal__add" type="submit">Добавить</button>

@@ -1,51 +1,101 @@
+/*--MOBILE--*/
+
 .modal {
   display: block;
   min-width: 320px;
   text-align: center;
   box-shadow: 0 5px 10px #c7c7c7;
-
-  /*&--hidden {
-    display: none;
-  }*/
-
-  &__wrapper {
-    padding: 36px 30px 46px;
-    outline: 2px solid #c7c7c7;
-  }
-
-  &__title {
-    font-family: $font-open-sans-bold;
-    font-size: 25px;
-    line-height: 25px;
-    text-transform: uppercase;
-  }
-
-  &__add {
-    background-color: $main-color;
-    color: $main-bg-color;
-    border: 2px solid transparent;
-  }
 }
+
+.modal__wrapper {
+  padding: 36px 30px 46px;
+  outline: 2px solid #c7c7c7;
+}
+
+.modal__title {
+  font-family: $font-open-sans-bold;
+  font-size: 25px;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+.modal-block {
+  padding-left: 0;
+  border: none;
+}
+
+.modal-block__select {
+  display: block;
+  margin-top: 20px;
+  font-family: $font-open-sans;
+  font-size: 15px;
+  line-height: 15px;
+  color: $secondary-text-color;
+}
+
+.modal__add {
+  background-color: $main-color;
+  color: $main-bg-color;
+  border: 2px solid transparent;
+}
+
+.modal-field {
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.modal-field__input {
+  display: none;
+}
+
+.modal-field__label {
+  display: block;
+  margin: 27px 7px 30px 0;
+  padding: 18px 35px;
+  font-family: $font-open-sans-bold;
+  font-size: 17px;
+  outline: 2px solid $border-color;
+  cursor: pointer;
+}
+
+.modal-field__label:last-child {
+  margin-right: 0;
+}
+
+/*--TABLET--*/
 
 @media ($tablet-widths) {
   .modal {
     @include container;
     width: 567px;
     text-align: center;
+  }
 
-    &__title {
-      font-size: 30px;
-      line-height: 30px;
-    }
+  .modal__title {
+    font-size: 30px;
+    line-height: 30px;
+  }
 
-    &__add {
-      margin: 0 auto;
-    }
+  .modal-block__select {
+    font-size: 17px;
+    line-height: 17px;
+  }
+
+  .modal__add {
+    margin: 0 auto;
   }
 }
+
+/*--DESKTOP--*/
 
 @media ($desktop-widths) {
   .modal {
      width: 567px;
+  }
+
+  .modal-block__select {
+    font-size: 17px;
+    line-height: 17px;
   }
 }

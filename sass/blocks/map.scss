@@ -1,3 +1,5 @@
+/*--MOBILE--*/
+
 .map {
   position: relative;
   margin: 0;
@@ -20,6 +22,8 @@
   height: auto;
 }
 
+/*--TABLET--*/
+
 @media ($tablet-widths) {
   .map img {
     display: block;
@@ -28,7 +32,13 @@
   }
 }
 
+/*--DESKTOP--*/
+
 @media ($desktop-widths) {
+  .map {
+    @include clearfix();
+  }
+
   .map img {
     display: block;
     float: right;

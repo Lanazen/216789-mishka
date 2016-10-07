@@ -1,110 +1,166 @@
+/*--MOBILE--*/
+
 .process {
   margin: 30px 30px 58px;
   font-family: $font-open-sans;
   text-align: left;
   color: $secondary-text-color;
   border: 1px solid $border-color;
-
-  &__wrapper {
-    padding: 33px 33px 32px;
-  }
-
-  &__title {
-    display: block;
-    padding-left: 60px;
-    font-family: $font-open-sans-bold;
-    font-size: 17px;
-    background: url(/img/icon-video.svg) no-repeat 1% 50%;
-    color: $main-text-color;
-  }
-
-  &__video {
-    position:relative;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  &__video::after {
-    content: "";
-    position: absolute;
-    top: 30%;
-    left: 30%;
-    width: 101px;
-    height: 77px;
-    background: url(/img/icon-play.svg) no-repeat 50% 50%;
-  }
-
-  &__description {
-    margin: -10px 0 25px;
-    font-size: 13px;
-    line-height: 2;
-  }
-
-  &__order {
-    text-align: center;
-  }
 }
+
+.process__header {
+  padding: 33px 33px 32px;
+}
+
+.process__title {
+  display: block;
+  padding-left: 60px;
+  font-family: $font-open-sans-bold;
+  font-size: 17px;
+  background: url(/img/icon-video.svg) no-repeat;
+  background-position: 1% 50%;
+  color: $main-text-color;
+}
+
+.process__video {
+  @include container;
+  position:relative;
+  width: 260px;
+  height: 150px;
+  padding: 0;
+}
+
+.process__video::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  width: 101px;
+  height: 77px;
+  background: url(/img/icon-play.svg) no-repeat 50% 50%;
+}
+
+.process__video img {
+  display: block;
+}
+
+.process__footer {
+  padding: 33px 33px 32px;
+}
+
+.process__description {
+  margin: -10px 0 25px;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.process__order {
+  width: 192px;
+  text-align: center;
+}
+
+/*--TABLET--*/
 
 @media ($tablet-widths) {
   .process {
-    position: relative;
-    margin: 50px;
+    margin: 50px 50px 65px;
+    border: none;
+  }
 
-    &__video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: auto;
-    }
+  .process__wrapper {
+    @include container;
+    display: flex;
+    flex-direction: column;
+  }
 
-    &__title {
-      margin-top: 400px;
-      font-size: 20px;
-      background: url(/img/icon-video.svg) no-repeat 1% 100%;
-    }
+  .process__header {
+    order: 2;
+    padding: 25px;
+    border: 1px solid $border-color;
+    border-bottom: transparent;
+  }
 
-    &__description {
-      font-size: 15px;
-    }
+  .process__video {
+    order: 1;
+    width: 668px;
+    height: 458px;
+    margin: 0;
 
-    &__order {
-      width: 100%;
-      margin: 0 auto;
+    &:after {
+      top: 200px;
+      left: 290px;
     }
+  }
+
+  .process__video img {
+    width: 668px;
+    height: 458px;
+  }
+
+  .process__footer {
+    order: 3;
+    padding: 0 40px;
+    border: 1px solid $border-color;
+    border-top: transparent;
+  }
+
+  .process__title {
+    margin-left: 10px;
+    padding-top: 10px;
+    font-size: 20px;
+  }
+
+  .process__footer {
+    padding: 15px 40px 0;
+    align-items: center;
+  }
+
+  .process__description {
+    font-size: 15px;
+  }
+
+  .process__order {
+    width: 100%;
+    margin: 40px auto;
   }
 }
 
+/*--DESKTOP--*/
+
 @media ($desktop-widths) {
   .process {
-    margin-bottom: 110px;
+    margin-bottom: 90px;
+  }
 
-    &__video {
-      top: 0;
-      right: 100px;
-      height: 455px;
-      width: 680px;
-    }
+  .process__wrapper {
+    display: block;
+    position: relative;
+  }
 
-    &__wrapper {
-      margin-bottom: 10px;
-    }
+  .process__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 680px;
+    height: 455px;
+  }
 
-    &__title {
-      margin-left: 640px;
-      margin-top: 0;
-      padding-top: 100px;
-      background: url(/img/icon-video.svg) no-repeat 15% 50%;
-    }
+  .process__header {
+    padding: 50px 50px 5px 760px;
+  }
 
-    &__description {
-      margin-left: 700px;
-    }
+  .process__title {
+    padding: 45px 0 10px;
+    margin: 0;
+    background-position: 0% 0%;
+  }
 
-    &__order {
-      margin-left: 750px;
-      width: 230px;
-    }
+  .process__footer {
+    padding-right: 60px;
+    padding-left: 760px;
+  }
+
+  .process__order {
+    margin: 45px 0 62px;
   }
 }

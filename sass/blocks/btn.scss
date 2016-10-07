@@ -1,6 +1,9 @@
+/*--MOBILE--*/
+
 .btn {
   display: block;
-  width:100%;
+  width: 256px;
+  margin: 0 auto;
   padding: 17px 0;
   font-family: $font-open-sans-bold;
   font-size: 17px;
@@ -12,15 +15,19 @@
   border: 2px solid $secondary-text-color;
 }
 
+/*--TABLET--*/
+
 @media ($tablet-widths) {
   .btn {
-    width: 43%;
-    /*width: 230px;*/
+    //width: 43%;
+    width: 226px;
   }
 }
 
+/*--DESKTOP--*/
+
 @media ($desktop-widths) {
   .btn {
-    width: 230px;
+    width: 226px;
   }
 }

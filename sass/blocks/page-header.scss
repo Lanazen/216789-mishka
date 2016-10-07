@@ -1,46 +1,22 @@
+/*--MOBILE--*/
+
 .page-header {
   min-width: 320px;
-  margin: 0 auto;
-  padding: 0 auto;
+  min-height: 79px;
   font-family: $font-open-sans-bold;
   text-align: center;
   background-color: $main-bg-color;
-
-  &__wrapper {
-    margin: 0px;
-    line-height: 80px;
-    outline: 1px solid $border-color;
-  }
-
-  &__logo {
-    display: inline-block;
-    min-height: 35px;
-    padding: 22px;
-  }
 }
+
+/*--TABLET--*/
 
 @media ($tablet-widths) {
-
   .page-header {
+    @include clearfix;
     min-height: 89px;
-
-    &__wrapper {
-      margin: 0 50px;
-    }
-
-    &__logo {
-      padding-left: 50px;
-      float: left;
-      min-height: 50px;
-    }
   }
 }
 
-@media ($desktop-widths) {
-  .page-header {
+/*--DESKTOP--*/
 
-    &__logo {
-      float: none;
-    }
-  }
-}
+@media ($desktop-widths) {}

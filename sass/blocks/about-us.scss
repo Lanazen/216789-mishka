@@ -1,87 +1,112 @@
+/*--MOBILE--*/
+
 .about-us {
   font-family: $font-open-sans-bold;
   color: $main-text-color;
+}
 
-  &__wrapper {
-    margin: 33px 30px;
-  }
+.about-us__wrapper {
+  margin: 33px 30px;
+}
 
-  &__title {
-    margin: 0;
-    font--size: 25px;
-    line-height: 25px;
-  }
+.about-us__title {
+  margin: 0;
+  font--size: 25px;
+  line-height: 25px;
+}
 
-  &__list {
-    padding: 0;
-    list-style: none;
-  }
+.about-us__list {
+  padding: 0;
+  list-style: none;
+}
 
-  &__item {
-    padding-top: 85px;
-    font-size: 17px;
-  }
+.about-us__item {
+  padding-top: 85px;
+  font-size: 17px;
 
-  &__item--clean {
+  &--clean {
     background: url(/img/icon-feature-1.svg) no-repeat 0% 35%;
   }
 
-  &__item--style {
+  &--style {
     background: url(/img/icon-feature-3.svg) no-repeat 0% 35%;
   }
 
-  &__item--like {
+  &--like {
     background: url(/img/icon-feature-5.svg) no-repeat 0% 35%;
   }
 
-  &__item--love {
+  &--love {
     background: url(/img/icon-feature-2.svg) no-repeat 0% 35%;
   }
 
-  &__item--support {
+  &--support {
     background: url(/img/icon-feature-4.svg) no-repeat 0% 35%;
   }
 
-  &__item--gift {
+  &--gift {
     background: url(/img/icon-feature-6.svg) no-repeat 0% 35%;
   }
 }
 
+/*--TABLET--*/
+
 @media ($tablet-widths) {
-  .about-us {
+  .about-us__wrapper {
+    margin: 60px 50px;
+  }
 
-    &__wrapper {
-      margin: 60px 50px;
+  .about-us__title {
+    font-size: 43px;
+    line-height: 43px;
+  }
+
+  .about-us__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .about-us__item {
+    width: 320px;
+    font-size: 20px;
+
+    &--clean {
+      order: 1;
     }
 
-    &__title {
-      font-size: 43px;
-      line-height: 43px;
+    &--style {
+      order: 3;
     }
 
-    &__item {
-      display: inline-block;
-      width: 295px;
-      margin-right: 35px;
-      font-size: 20px;
+    &--like {
+      order: 5;
+    }
+
+    &--love {
+      order: 2;
+    }
+
+    &--support {
+      order: 4;
+    }
+
+    &--gift {
+      order: 6;
     }
   }
 }
 
+/*--DESKTOP--*/
+
 @media ($desktop-widths) {
-  .about-us {
+  .about-us__wrapper {
+    margin: 70px 225px;
+  }
 
-    &__wrapper {
-      margin: 70px 225px;
-    }
-
-     &__title {
-      font--size: 53px;
-      line-height: 53px;
-    }
-
-    &__item {
-      margin-right: 155px;
-    }
+  .about-us__title {
+    font--size: 53px;
+    line-height: 53px;
   }
 }

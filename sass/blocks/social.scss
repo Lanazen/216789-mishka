@@ -1,31 +1,37 @@
+/*--MOBILE--*/
+
 .social {
-  margin: 0 30px;
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
+}
 
-  &__link {
-    display: inline-block;
-    margin: 20px;
-  }
+.social__link {
+  display: inline-block;
+  margin-right: 40px;
+  padding: 20px 0;
+  vertical-align: bottom;
 
-  &__link--in {
+  &--in {
     width: 22px;
     height: 22px;
     background: url(/img/icon-insta.svg) no-repeat 50% 50%;
   }
 
-  &__link--fb {
+  &--fb {
     width: 15px;
     height: 28px;
     background: url(/img/icon-fb.svg) no-repeat 50% 50%;
   }
 
-  &__link--tw {
+  &--tw {
     width: 24px;
     height: 21px;
+    margin-right: 0;
     background: url(/img/icon-twitter.svg) no-repeat 50% 50%;
   }
 }
+
+/*--TABLET--*/
 
 @media ($tablet-widths) {
   .social {
@@ -33,13 +39,15 @@
     margin-left: 120px;
     padding: 0;
     text-align: center;
+    vertical-align: middle;
     border-bottom: none;
   }
 }
 
+/*--DESKTOP--*/
+
 @media ($desktop-widths) {
   .social {
-    margin-left: 200px;
-    text-align: center;
+    margin: 0;
   }
 }
