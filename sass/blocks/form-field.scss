@@ -45,26 +45,10 @@
   border: 2px solid $secondary-text-color;
   border-radius: 50%;
   cursor: pointer;
-
-  &:hover {
-    border: 2px solid $main-color;
-  }
-
-  &:active {
-    border: 2px solid $border-color;
-  }
 }
 
 .form-field__input--checkbox + label::before {
   border-radius: 0%;
-
-  &:hover {
-    border: 2px solid $main-color;
-  }
-
-  &:active {
-    border: 2px solid $border-color;
-  }
 }
 
 .form-field__input--radio:checked + label::before {
@@ -91,12 +75,13 @@
   font-size: 17px;
   border: none;
   border-bottom: 2px solid $main-text-color;
+  outline: none;
 
   &:hover {
     border-bottom: 2px solid $main-color;
   }
 
-  &:active {
+  &:checked {
     border-bottom: 2px solid $main-color;
   }
 
@@ -143,6 +128,7 @@
 
   &:active {
     border: 2px solid $main-color;
+    outline: none;
   }
 
   &:invalid {
