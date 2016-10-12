@@ -7,33 +7,50 @@
 }
 
 .contacts__wrapper {
-  margin: 45px 30px 42px;
+  margin: 88px 30px -10px;
 }
 
 .contacts__title {
+  margin-bottom: 34px;
   font-family: $font-open-sans-bold;
   font-size: 18px;
   color: $main-text-color;
 }
 
 .contacts__item {
-  margin-bottom: 10px;
+  margin-bottom: 35px;
   padding: 0;
 }
 
 .contacts__type {
-  padding-right: 32px;
+  padding-right: 28px;
   vertical-align: top;
 }
 
 .contacts__address {
   display: inline-block;
-  width: 150px;
   margin-top: -5px;
   font-size: 15px;
-  line-height: 2;
+  line-height: 29px;
   text-decoration: none;
   color: $secondary-text-color;
+}
+
+.contacts__address--mail {
+  width: 178px;
+  border-bottom: 1px solid $main-color;
+
+  &:hover {
+    color: $main-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.contacts__address--city {
+  width: 141px;
 }
 
 /*--TABLET--*/
@@ -42,11 +59,13 @@
   .contacts {
     font-size: 17px;
     background: url(/img/icon-flag.svg) no-repeat;
-    background-position: 93% 0%;
+    background-position: 93% 23%;
   }
 
   .contacts__wrapper {
     margin: 75px 50px 0;
+    padding-top: 30px;
+    padding-bottom: 6px;
   }
 
   .contacts__title {
@@ -56,13 +75,27 @@
   .contacts__item {
     display: inline-block;
     width: 300px;
-    margin-right: 30px;
+    margin-top: 14px;
+    margin-right: 20px;
     font-size: 17px;
+    vertical-align: top;
+  }
+
+  .contacts__type {
+    padding-right: 20px;
   }
 
   .contacts__address {
     vertical-align: top;
     font-size: 17px;
+  }
+
+  .contacts__address--mail {
+    width: 205px;
+  }
+
+  .contacts__address--city {
+    width: 221px;
   }
 }
 
@@ -70,11 +103,11 @@
 
 @media ($desktop-widths) {
   .contacts {
-    background-position: 9% 0%;
+    background-position: 9% 41%;
   }
 
   .contacts__wrapper {
-    margin: 70px 50px 105px 225px;
+    margin: 45px 50px 105px 225px;
   }
 
   .contacts__title {
@@ -84,10 +117,11 @@
 
   .contacts__item {
     display: block;
-    margin-bottom: 50px;
+    margin-top: 45px;
+    margin-bottom: 0px;
   }
 
-  .contacts__address {
-    width: 200px;
+  .contacts__address--city {
+    width: 221px;
   }
 }

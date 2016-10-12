@@ -2,7 +2,7 @@
 
 .page-footer {
   margin: 0;
-  padding: 0 0 23px;
+  padding: 0 0 20px;
   font-family: $font-open-sans-bold;
   text-align: center;
   background-color: $secondary-bg-color;
@@ -14,7 +14,8 @@
 }
 
 .page-footer__copyright {
-  margin-top: 0;
+  margin-top: 4px;
+  padding-top: 15px;
   font-size: 19px;
 }
 
@@ -22,9 +23,8 @@
   display: inline-block;
   width: 27px;
   height: 35px;
-  margin-top: 10px;
   margin-left: 20px;
-  vertical-align: bottom;
+  vertical-align: middle;
   background: url(/img/logo-htmlacademy.svg) no-repeat 50% 50%;
 }
 

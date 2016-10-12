@@ -1,16 +1,23 @@
 /*--MOBILE--*/
 
 .form-block {
+  position: relative;
   padding-left: 0;
   border: none;
+  border-top: 1px solid $main-color;
 }
 
 .form-block__title {
+  position: absolute;
+  top: -10px;
+  left: 0;
   display: inline-block;
-  margin-bottom: 28px;
+  width: 64px;
+  margin-bottom: 30pxpx;
   padding-left: 0;
   text-transform: uppercase;
   vertical-align: middle;
+  background-color: $main-bg-color;
   color: $main-color;
 }
 
@@ -18,9 +25,25 @@
   margin-bottom: 6px;
 }
 
+.form-block__inner {
+  margin-top: 34px;
+}
+
+.form-block:nth-child(3) .form-block__wrapper{
+  margin-bottom: 31px;
+}
+
+.form-block:nth-child(2) .form-block__inner {
+  margin-top: 32px;
+}
+
 /*--TABLET--*/
 
 @media ($tablet-widths) {
+  .form-block {
+    border: none;
+  }
+
   .form-block:nth-child(2),
   .form-block:nth-child(4),
   .form-block:nth-child(5) {
@@ -29,24 +52,54 @@
   }
 
   .form-block__wrapper {
+    margin: 50px 50px 40px;
+  }
+
+  .form-block__title {
+    margin-left: 50px;
+    top: 72px;
+    background-color: transparent;
+  }
+
+  .form-block:nth-child(3) .form-block__title {
+    top: 63px;
+  }
+
+  .form-block__inner {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    margin: 50px 50px;
+    margin-top: 60px;
+    margin-left: 163px;
   }
 
-  .form-block__title {
-    //display: block;
+  .form-block:nth-child(2) .form-block__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 62px;
+    margin-bottom: -20px;
   }
 
-  .form-block:nth-child(4),
-  .form-block:nth-child(5) {
-    padding-bottom: 0;
-    padding-top: -20px;
+  .form-block:nth-child(3) .form-block__inner {
+    margin-top: 54px;
+    margin-bottom: 52px;
   }
 
-  .form-block__title {
-    align-self: flex-start;
+  .form-block:nth-child(5) .form-block__inner {
+    margin-top: -130px;
+    margin-bottom: -30px;
+  }
+
+  .form-block:nth-child(5) .form-block__title {
+    top: -70px;
+  }
+
+  .form-block:nth-child(6) .form-block__title {
+    top: 77px;
+  }
+
+  .form-block:nth-child(6) .form-block__wrapper {
+    margin-bottom: 32px;
   }
 }
 
@@ -64,5 +117,9 @@
 
   .form-block__wrapper:nth-child(3) {
     flex-wrap: nowrap;
+  }
+
+  .form-block__title {
+    margin-left: 110px;
   }
 }

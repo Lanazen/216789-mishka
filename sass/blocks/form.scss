@@ -11,14 +11,16 @@
 }
 
 .form__description {
+  margin-top: 0px;
+  margin-bottom: 28px;
   font-family: $font-open-sans;
   font-size: 13px;
-  line-height: 2;
+  line-height: 24px;
   color: $secondary-text-color;
 }
 
 .form__note {
-  margin-top: -35px;
+  margin-top: -38px;
   margin-bottom: 20px;
   font-family: $font-open-sans;
   font-size: 14px;
@@ -36,12 +38,14 @@
 
   .form__wrapper {
     margin: auto;
-    padding: 85px 0 55px;
+    margin-bottom: -4px;
+    padding: 70px 0 55px;
   }
 
   .form__description {
     margin: auto 50px;
     font-size: 17px;
+    line-height: 29px;
   }
 
   .form__footer {
@@ -67,9 +71,14 @@
 /*--DESKTOP--*/
 
 @media ($desktop-widths) {
+  .form__wrapper {
+    margin-bottom: -15px;
+  }
+
   .form__description {
     max-width: 675px;
     margin: 0 auto;
+    margin-top: 55px;
   }
 
   .form__footer {

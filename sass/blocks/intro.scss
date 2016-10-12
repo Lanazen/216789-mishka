@@ -2,9 +2,14 @@
 
 .intro {
   margin: 0;
-  padding: 55px 30px;
+  padding: 51px 30px 58px;
   background-color: $secondary-bg-color;
   color: $main-text-color;
+
+  &--index {
+  min-height: 355px;
+  background: url(/img/hero-mobile@1x.jpg) no-repeat 50% -20%;
+  }
 }
 
 .intro__note {
@@ -14,35 +19,30 @@
 .intro__header {
   font-family: $font-open-sans-bold;
   font-size: 27px;
-  line-height: 1.2;
-}
-
-.intro--index {
-  min-height: 160px;
-  background: url(/img/hero-mobile@1x.jpg) no-repeat 50% 0%;
-  background-size: cover;
+  line-height: 30px;
 }
 
 /*--TABLET--*/
 
 @media ($tablet-widths) {
   .intro {
-    min-height: 175px;
+    min-height: 115px;
     border-top: 1px solid  $border-color;
 
    &--index {
-      min-height: 745px;
+     min-height: 745px;
+     background-size: cover;
     }
   }
 
   .intro__header {
-    margin-top: 60px;
+    margin-top: 43px;
     margin-left: 0;
-    font-size: 53px;
-    line-height: 53px;
+    font-size: 43px;
+    line-height: 49px;
 
     &--index {
-      margin-top: 165px;
+      margin-top: 101px;
     }
   }
 }
@@ -51,7 +51,7 @@
 
 @media ($desktop-widths) {
   .intro {
-    min-height: 195px;
+    min-height: 145px;
 
     &--index {
       min-height: 630px;

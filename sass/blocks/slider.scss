@@ -7,7 +7,7 @@
 }
 
 .slider__wrapper {
-  margin: 65px 30px 45px;
+  margin: 45px 30px 65px;
 }
 
 .slider__title {
@@ -19,6 +19,7 @@
 }
 
 .slider__write {
+  width: 254px;
   margin: 0 auto;
   text-align: center;
 }
@@ -29,6 +30,7 @@
   .slider {
     position: relative;
     height: 457px;
+    margin-bottom: 40px;
     background: url(/img/review@1x.jpg) no-repeat 0% 20%;
   }
 
@@ -37,14 +39,15 @@
   }
 
   .slider__title {
-    padding-top: 85px;
+    margin-bottom: 25px;
+    padding-top: 80px;
     font-size: 43px;
     line-height: 43px;
   }
 
   .slider__write {
     position: absolute;
-    top: 90px;
+    top: 78px;
     right: 50px;
     width: 175px;
   }
@@ -62,6 +65,7 @@
   }
 
   .slider__title {
+    padding-top: 70px;
     font-size: 53px;
     line-height: 53px;
   }

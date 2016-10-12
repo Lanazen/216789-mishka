@@ -2,25 +2,37 @@
 
 .modal {
   display: block;
-  min-width: 320px;
+  max-width: 320px;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -818px;
+  z-index: 15;
   text-align: center;
+  background: $main-bg-color;
   box-shadow: 0 5px 10px #c7c7c7;
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .modal__wrapper {
-  padding: 36px 30px 46px;
-  outline: 2px solid #c7c7c7;
+  padding: 30px 30px 45px;
+  border: 1px solid #c7c7c7;
 }
 
 .modal__title {
   font-family: $font-open-sans-bold;
   font-size: 25px;
-  line-height: 25px;
+  line-height: 30px;
   text-transform: uppercase;
 }
 
 .modal-block {
-  padding-left: 0;
+  padding: 0;
+  margin: 0;
   border: none;
 }
 
@@ -33,16 +45,16 @@
   color: $secondary-text-color;
 }
 
-.modal__add {
-  background-color: $main-color;
-  color: $main-bg-color;
-  border: 2px solid transparent;
-}
-
 .modal-field {
   display: inline-block;
-  margin: 0;
+  width: 77px;
+  margin-top: 31px;
+  margin-right: 7px;
   vertical-align: middle;
+}
+
+.modal-field:last-child {
+  margin-right: 0;
 }
 
 .modal-field__input {
@@ -51,26 +63,38 @@
 
 .modal-field__label {
   display: block;
-  margin: 27px 7px 30px 0;
-  padding: 18px 35px;
+  padding: 13px 0;
   font-family: $font-open-sans-bold;
   font-size: 17px;
   outline: 2px solid $border-color;
   cursor: pointer;
+
+  &:hover {
+    outline: 2px solid #c7c7c7;
+  }
+
+  &:active {
+    outline: 2px solid $main-color;
+  }
 }
 
-.modal-field__label:last-child {
-  margin-right: 0;
+.modal__add {
+  margin-top: 33px;
+  background-color: $main-color;
+  color: $main-bg-color;
+  border: 2px solid transparent;
 }
 
 /*--TABLET--*/
 
 @media ($tablet-widths) {
   .modal {
-    @include container;
-    width: 567px;
-    text-align: center;
+    max-width: 568px;
   }
+
+  .modal__wrapper {
+  padding: 47px 60px 46px;
+}
 
   .modal__title {
     font-size: 30px;
@@ -78,11 +102,19 @@
   }
 
   .modal-block__select {
+    margin-top: 32px;
     font-size: 17px;
     line-height: 17px;
   }
 
+  .modal-field {
+    width: 108px;
+    margin-right: 7px;
+    margin-bottom: 32px;
+}
+
   .modal__add {
+    width: 350px;
     margin: 0 auto;
   }
 }
@@ -91,7 +123,7 @@
 
 @media ($desktop-widths) {
   .modal {
-     width: 567px;
+     width: 568px;
   }
 
   .modal-block__select {

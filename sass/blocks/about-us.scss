@@ -6,7 +6,7 @@
 }
 
 .about-us__wrapper {
-  margin: 33px 30px;
+  margin: 35px 30px;
 }
 
 .about-us__title {
@@ -21,31 +21,33 @@
 }
 
 .about-us__item {
-  padding-top: 85px;
+  padding-top: 71px;
+  padding-bottom: 14px;
   font-size: 17px;
+  line-height: 19px;
 
   &--clean {
-    background: url(/img/icon-feature-1.svg) no-repeat 0% 35%;
+    background: url(/img/icon-feature-1.svg) no-repeat 0% 20%;
   }
 
   &--style {
-    background: url(/img/icon-feature-3.svg) no-repeat 0% 35%;
+    background: url(/img/icon-feature-3.svg) no-repeat 0% 19%;
   }
 
   &--like {
-    background: url(/img/icon-feature-5.svg) no-repeat 0% 35%;
+    background: url(/img/icon-feature-5.svg) no-repeat 0% 22%;
   }
 
   &--love {
-    background: url(/img/icon-feature-2.svg) no-repeat 0% 35%;
+    background: url(/img/icon-feature-2.svg) no-repeat 0% 22%;
   }
 
   &--support {
-    background: url(/img/icon-feature-4.svg) no-repeat 0% 35%;
+    background: url(/img/icon-feature-4.svg) no-repeat 0% 20%;
   }
 
   &--gift {
-    background: url(/img/icon-feature-6.svg) no-repeat 0% 35%;
+    background: url(/img/icon-feature-6.svg) no-repeat 0% 20%;
   }
 }
 
@@ -53,10 +55,11 @@
 
 @media ($tablet-widths) {
   .about-us__wrapper {
-    margin: 60px 50px;
+    margin: 60px 50px 40px;
   }
 
   .about-us__title {
+    margin-bottom: 33px;
     font-size: 43px;
     line-height: 43px;
   }
@@ -69,8 +72,11 @@
   }
 
   .about-us__item {
-    width: 320px;
+    width: 300px;
+    padding-top: 70px;
+    padding-bottom: 41px;
     font-size: 20px;
+    line-height: 22px;
 
     &--clean {
       order: 1;
@@ -102,11 +108,17 @@
 
 @media ($desktop-widths) {
   .about-us__wrapper {
-    margin: 70px 225px;
+    margin: 70px 225px 53px;
   }
 
   .about-us__title {
-    font--size: 53px;
+    margin-bottom: 25px;
+    font-size: 53px;
     line-height: 53px;
+  }
+
+  .about-us__item {
+    padding-top: 77px;
+    padding-bottom: 37px;
   }
 }

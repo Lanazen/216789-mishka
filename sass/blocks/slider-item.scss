@@ -6,13 +6,13 @@
 
 .slider-item__text {
   margin: 0;
-  padding: 38px 0 40px;
+  padding: 26px 0 8px;
   font-size: 15px;
   line-height: 2;
 }
 
 .slider-item__author {
-  margin-bottom: 15px;
+  margin-bottom: 6px;
   font-family: $font-open-sans-bold;
   font-size: 18px;
   color: $main-text-color;
@@ -24,31 +24,53 @@
 
 .slider-item__prev {
   width: 50%;
-  min-height: 50px;
+  min-height: 52px;
   margin: 35px 0 37px;
   text-align: center;
   background: url(/img/icon-left-arrow.svg) no-repeat 50% 50%;
-  border: none;
-  outline: 1px solid $border-color;
+  border: 1px solid $border-color;
+  border-right: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    border: none;
+    opacity: 0.3;
+  }
 }
 
 .slider-item__next {
   width: 50%;
-  min-height: 50px;
+  min-height: 52px;
   margin: 35px 0 37px;
   background: url(/img/icon-right-arrow.svg) no-repeat 50% 50%;
-  border: none;
-  outline: 1px solid $border-color;
+  border: 1px solid $border-color;
+
+  &:hover {
+    border: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    border: none;
+    opacity: 0.3;
+  }
 }
 
 /*--TABLET--*/
 
 @media ($tablet-widths) {
   .slider-item__text {
+    max-width: 670px;
     font-size: 17px;
+    line-height: 31px;
+    text-align: left;
   }
 
   .slider-item__author {
+    margin-top: 48px;
     font-size: 18px;
   }
 
@@ -58,19 +80,19 @@
 
   .slider-item__prev {
     position: absolute;
-    bottom: -20px;
-    right: 150px;
+    bottom: 13px;
+    right: 145px;
     width: 80px;
     text-align: center;
-    outline: none;
+    border: none;
   }
 
   .slider-item__next {
     position: absolute;
-    bottom: -20px;
+    bottom: 13px;
     right: 60px;
     width: 80px;
-    outline: none;
+    border: none;
   }
 }
 
@@ -78,20 +100,21 @@
 
 @media ($desktop-widths) {
   .slider-item__text {
-    width: 770px;
+    max-width: 770px;
   }
 
   .slider-item__author {
+    margin-top: 30px;
     font-size: 17px;
   }
 
   .slider-item__prev {
-    bottom: 35px;
-    right: 150px;
+    bottom: 60px;
+    right: 148px;
   }
 
   .slider-item__next {
-    bottom: 35px;
+    bottom: 60px;
     right: 60px;
   }
 }

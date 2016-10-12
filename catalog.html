@@ -11,19 +11,27 @@
     <!--NAVIGATION-->
 
     <header class="page-header">
-      <nav class="main-nav main-nav--closed">
+      <nav class="main-nav  main-nav--closed  main-nav--nojs">
         <button class="main-nav__toggle" type="button"></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__logo  main-nav__item">
               <img src="img/logo-mobile.svg" width="85" height="35" alt="MISHKA">
             </li>
-            <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
-            <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
-            <li class="main-nav__item  main-nav__item--search">
-              <a href="#">Поиск по сайту</a>
+            <li class="main-nav__item">
+              <a class="main-nav__item--text" href="catalog.html">Каталог товаров</a>
             </li>
-            <li class="main-nav__item  main-nav__item--cart"><a href="#">Корзина: пока пуста</a></li>
+            <li class="main-nav__item">
+              <a class="main-nav__item--text" href="form.html">Вязание на заказ</a>
+            </li>
+            <li class="main-nav__item  main-nav__search">
+              <a class="main-nav__search--icon" href="#"></a>
+              <a class="main-nav__search--text" href="#">Поиск по сайту</a>
+            </li>
+            <li class="main-nav__item  main-nav__cart">
+              <a class="main-nav__cart--icon" href="#"></a>
+              <a class="main-nav__cart--text" href="#">Корзина: пока пуста</a>
+            </li>
             <li class="main-nav__item  main-nav__item--desktop"><a href="#">Новые поступления</a></li>
             <li class="main-nav__item  main-nav__item--desktop"><a href="#">Распродажа</a></li>
             <li class="main-nav__item  main-nav__item--tablet">Бесплатная доставка по России</li>
@@ -90,6 +98,7 @@
 
       <!--MODAL-->
 
+      <div class="overlay  overlay--hidden"></div>
       <section class="modal  modal--hidden">
         <div class="modal__wrapper">
           <form action="https://echo.htmlacademy.ru" method="post">
@@ -114,19 +123,23 @@
         </div>
       </section>
 
-      <!--PROCESS-->
+      <!--PRODUCTION-->
 
-      <section class="process">
-        <div class="process__wrapper">
-          <div class="process__header">
-            <span class="process__title">Процесс производства</span>
-          </div>
-          <div class="process__video">
-            <img src="img/video-mobile@1x.jpg" width="260" height="150" alt="Процесс производства">
-          </div>
-          <div class="process__footer">
-            <p class="process__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-            <a class="btn  process__order" href="#">Сделать заказ</a>
+      <section class="production">
+        <div class="production__wrapper">
+          <div class="production__video"></div>
+          <div class="production__process">
+            <div class="production__header">
+              <div class="production__icon"></div>
+              <span class="production__title">Процесс производства</span>
+            </div>
+            <div class="production__picture">
+              <img src="img/video-mobile@1x.jpg" width="260" height="150" alt="Процесс производства">
+            </div>
+            <div class="production__info">
+              <p class="production__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+              <a class="btn  production__order" href="#">Сделать заказ</a>
+            </div>
           </div>
         </div>
       </section>
@@ -150,5 +163,21 @@
         </div>
       </div>
     </footer>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>

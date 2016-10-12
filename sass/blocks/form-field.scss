@@ -17,14 +17,23 @@
 .form-field__label--checkbox {
   display: inline-block;
   position: relative;
+  width: 160px;
+  margin-top: 4px;
+  margin-bottom: 4px;
   margin-left: 60px;
   font-family: $font-open-sans-bold;
   font-size: 17px;
+  line-height: 18px;
   vertical-align: middle;
+  cursor: pointer;
 }
 
-.form-field__input--radio + label:before,
-.form-field__input--checkbox + label:before {
+.form-field:first-child .form-field__label--radio {
+  margin-bottom: -15px;
+}
+
+.form-field__input--radio + label::before,
+.form-field__input--checkbox + label::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -36,19 +45,64 @@
   border: 2px solid $secondary-text-color;
   border-radius: 50%;
   cursor: pointer;
+
+  &:hover {
+    border: 2px solid $main-color;
+  }
+
+  &:active {
+    border: 2px solid $border-color;
+  }
 }
 
-.form-field__input--checkbox + label:before {
+.form-field__input--checkbox + label::before {
   border-radius: 0%;
+
+  &:hover {
+    border: 2px solid $main-color;
+  }
+
+  &:active {
+    border: 2px solid $border-color;
+  }
+}
+
+.form-field__input--radio:checked + label::before {
+  background: $main-color;
+  box-shadow: 0 0 0 10px $main-bg-color inset;
+}
+
+.form-field__input--checkbox:checked + label::after {
+  position: absolute;
+  content: "";
+  top: -4px;
+  left: -45px;
+  width: 8px;
+  height: 20px;
+  border-right: 2px solid $main-text-color;
+  border-bottom: 2px solid $main-text-color;
+  transform: rotate(45deg);
 }
 
 .form-field__input--text {
   width: 100%;
-  padding: 14px 0 14px;
+  padding: 12px 0 13px;
   font-family: $font-open-sans;
   font-size: 17px;
   border: none;
   border-bottom: 2px solid $main-text-color;
+
+  &:hover {
+    border-bottom: 2px solid $main-color;
+  }
+
+  &:active {
+    border-bottom: 2px solid $main-color;
+  }
+
+  &:invalid {
+    border-bottom: 2px solid #f0b1b1;
+  }
 }
 
 .form-field__input--text::-mozz-placeholder {
@@ -64,18 +118,36 @@
 }
 
 .form-field__input--phone {
+  margin-bottom: 18px;
+  padding: 22px 0 14px;
   background: url(/img/icon-phone.svg) no-repeat 97% 50%;
 }
 
 .form-field__input--mail {
+  margin-bottom: 12px;
+  padding: 22px 0 13px;
   background: url(/img/icon-mail.svg) no-repeat 98% 50%;
 }
 
 .form-field__message {
+  margin-top: 33px;
   width: 95%;
   min-height: 125px;
-  padding: 18px 0 0 17px;
+  padding: 14px 0 0 15px;
+  line-height: 18px;
   border: 2px solid $main-text-color;
+
+  &:hover {
+    border: 2px solid $main-color;
+  }
+
+  &:active {
+    border: 2px solid $main-color;
+  }
+
+  &:invalid {
+    border-bottom: 2px solid #f0b1b1;
+  }
 }
 
 .form-field__message::-mozz-placeholder {
@@ -94,70 +166,106 @@
 
 @media ($tablet-widths) {
   .form-field {
-    display: flex;
-    //flex-direction:column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    flex-basis: 300px;
-    margin-right: auto;
-    margin-bottom: auto;
-    //margin-left: 165px;
+    width: 195px;
+    margin-bottom: 0;
   }
 
-  .form-field__label--radio:not(first-of-child) {
-    margin-left: 235px;
+  .form-field:nth-child(2n) .form-field__label--radio {
+    margin-top: 54px;
   }
 
-  .form-field__label--radio {
-
-  }
-
-  .form-field__label--checkbox {
-    flex-basis: 210px;
-    margin-left: 80px;
-    margin-bottom: 60px;
-    font-size: 19px;
-  }
-
-  .form-field--text {
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-grow: 1;
-    margin-left: 165px;
-  }
-
-  .form-field__input--text {
-    width: 70%;
-    margin-left: 20px;
+  .form-field__label {
+    padding-top: 4px;
     padding-left: 20px;
   }
 
+  .form-field__label--radio {
+    width: 255px;
+    padding-bottom: 14px;
+  }
+
+  .form-field__label--checkbox {
+    width: 125px;
+    margin-bottom: 50px;
+    font-size: 19px;
+  }
+
+  .form-field__input--radio + label::before,
+  .form-field__input--checkbox + label::before {
+    width: 48px;
+    height: 48px;
+  }
+
+  .form-field__input--radio:checked + label::before {
+    box-shadow: 0 0 0 14px $main-bg-color inset;
+  }
+
+  .form-field__input--checkbox:checked + label::after {
+    top: -4px;
+    left: -42px;
+    width: 15px;
+    height: 28px;
+  }
+
+  .form-field--text {
+    display: flex;
+    width: 100%;
+  }
+
+  .form-field--text:first-child,
+  .form-field--text:nth-child(2) {
+    margin-bottom: 35px;
+  }
+
+  .form-field__input--text {
+    box-sizing: border-box;
+    width: 100%;
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-top: 6px;
+    padding-bottom: 11px;
+  }
+
   .form-field__label--text {
+    padding-left: 0;
+    font-size: 19px;
+  }
+
+  .form-field__input--text::-mozz-placeholder {
+    font-size: 19px;
+  }
+
+  .form-field__input--text::-webkit-input-placeholder {
     font-size: 19px;
   }
 
   .form-field__input--phone,
   .form-field__input--mail {
-    justify-content: space-between;
-    align-self: flex-end;
-    flex-grow: 1;
-    margin-top: -100px;
-    margin-bottom: -35px;
+    margin-left: 0;
   }
 
   .form-field__message {
-    justify-content: space-between;
-    flex-grow: 1;
     min-width: 480px;
-    height: 142px;
-    margin-left: 165px;
-    margin-top: -60px;
+    margin-top: 0px;
+  }
+
+  .form-field__message::-mozz-placeholder {
+    font-size: 19px;
+  }
+
+  .form-field__message::-webkit-input-placeholder {
+    font-size: 19px;
   }
 }
 
 /*--DESKTOP--*/
 
 @media ($desktop-widths) {
+  .form-field__input--text {
+    padding-top: 6px;
+    padding-bottom: 11px;
+  }
+
   .form-field__message {
     min-width: 625px;
   }
