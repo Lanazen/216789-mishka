@@ -45,26 +45,10 @@
   border: 2px solid $secondary-text-color;
   border-radius: 50%;
   cursor: pointer;
-
-  &:hover {
-    border: 2px solid $main-color;
-  }
-
-  &:active {
-    border: 2px solid $border-color;
-  }
 }
 
 .form-field__input--checkbox + label::before {
   border-radius: 0%;
-
-  &:hover {
-    border: 2px solid $main-color;
-  }
-
-  &:active {
-    border: 2px solid $border-color;
-  }
 }
 
 .form-field__input--radio:checked + label::before {
