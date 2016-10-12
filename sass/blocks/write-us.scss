@@ -1,5 +1,33 @@
+/*--MOBILE--*/
+
 .write-us {
   margin: 38px 30px;
   text-align: center;
   vertical-align: middle;
+}
+
+/*--TABLET--*/
+
+@media ($tablet-widths) {
+  .write-us {
+    margin-top: 55px;
+    margin-bottom: 55px;
+  }
+
+  .write-us__btn {
+    margin: 0 auto;
+  }
+}
+
+/*--DESKTOP--*/
+
+@media ($desktop-widths) {
+  .write-us {
+    margin-top: -45px;
+    margin-bottom: 107px;
+  }
+
+  .write-us__btn {
+    margin-left: 195px;
+  }
 }

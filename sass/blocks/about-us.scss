@@ -1,48 +1,124 @@
+/*--MOBILE--*/
+
 .about-us {
   font-family: $font-open-sans-bold;
   color: $main-text-color;
+}
 
-  &__wrapper {
-    margin: 33px 30px;
+.about-us__wrapper {
+  margin: 35px 30px;
+}
+
+.about-us__title {
+  margin: 0;
+  font--size: 25px;
+  line-height: 25px;
+}
+
+.about-us__list {
+  padding: 0;
+  list-style: none;
+}
+
+.about-us__item {
+  padding-top: 71px;
+  padding-bottom: 14px;
+  font-size: 17px;
+  line-height: 19px;
+
+  &--clean {
+    background: url(/img/icon-feature-1.svg) no-repeat 0% 20%;
   }
 
-  &__title {
-    margin: 0;
-    font--size: 25px;
-    line-height: 25px;
+  &--style {
+    background: url(/img/icon-feature-3.svg) no-repeat 0% 19%;
   }
 
-  &__list {
-    padding: 0;
-    list-style: none;
+  &--like {
+    background: url(/img/icon-feature-5.svg) no-repeat 0% 22%;
   }
 
-  &__item {
-    padding-top: 85px;
-    font-size: 17px;
+  &--love {
+    background: url(/img/icon-feature-2.svg) no-repeat 0% 22%;
   }
 
-  &__item--clean {
-    background: url(/img/icon-feature-1.svg) no-repeat 0% 35%;
+  &--support {
+    background: url(/img/icon-feature-4.svg) no-repeat 0% 20%;
   }
 
-  &__item--style {
-    background: url(/img/icon-feature-3.svg) no-repeat 0% 35%;
+  &--gift {
+    background: url(/img/icon-feature-6.svg) no-repeat 0% 20%;
+  }
+}
+
+/*--TABLET--*/
+
+@media ($tablet-widths) {
+  .about-us__wrapper {
+    margin: 60px 50px 40px;
   }
 
-  &__item--like {
-    background: url(/img/icon-feature-5.svg) no-repeat 0% 35%;
+  .about-us__title {
+    margin-bottom: 33px;
+    font-size: 43px;
+    line-height: 43px;
   }
 
-  &__item--love {
-    background: url(/img/icon-feature-2.svg) no-repeat 0% 35%;
+  .about-us__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
   }
 
-  &__item--support {
-    background: url(/img/icon-feature-4.svg) no-repeat 0% 35%;
+  .about-us__item {
+    width: 300px;
+    padding-top: 70px;
+    padding-bottom: 41px;
+    font-size: 20px;
+    line-height: 22px;
+
+    &--clean {
+      order: 1;
+    }
+
+    &--style {
+      order: 3;
+    }
+
+    &--like {
+      order: 5;
+    }
+
+    &--love {
+      order: 2;
+    }
+
+    &--support {
+      order: 4;
+    }
+
+    &--gift {
+      order: 6;
+    }
+  }
+}
+
+/*--DESKTOP--*/
+
+@media ($desktop-widths) {
+  .about-us__wrapper {
+    margin: 70px 225px 53px;
   }
 
-  &__item--gift {
-    background: url(/img/icon-feature-6.svg) no-repeat 0% 35%;
+  .about-us__title {
+    margin-bottom: 25px;
+    font-size: 53px;
+    line-height: 53px;
+  }
+
+  .about-us__item {
+    padding-top: 77px;
+    padding-bottom: 37px;
   }
 }

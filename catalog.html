@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
       <link rel="stylesheet" href="css/style.css">
   </head>
@@ -10,17 +11,32 @@
     <!--NAVIGATION-->
 
     <header class="page-header">
-      <div class="page-header__logo">
-        <img src="img/logo-mobile.svg" width="85" height="35" alt="MISHKA">
-      </div>
-      <nav class="main-nav main-nav--closed">
+      <nav class="main-nav  main-nav--closed  main-nav--nojs">
         <button class="main-nav__toggle" type="button"></button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item"><a href="#">Каталог товаров</a></li>
-          <li class="main-nav__item"><a href="#">Вязание на заказ</a></li>
-          <li class="main-nav__item"><a href="#">Поиск по сайту</a></li>
-          <li class="main-nav__item"><a href="#">Корзина: пока пуста</a></li>
-        </ul>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__logo  main-nav__item">
+              <img src="img/logo-mobile.svg" width="85" height="35" alt="MISHKA">
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__item--text" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__item--text" href="form.html">Вязание на заказ</a>
+            </li>
+            <li class="main-nav__item  main-nav__search">
+              <a class="main-nav__search--icon" href="#"></a>
+              <a class="main-nav__search--text" href="#">Поиск по сайту</a>
+            </li>
+            <li class="main-nav__item  main-nav__cart">
+              <a class="main-nav__cart--icon" href="#"></a>
+              <a class="main-nav__cart--text" href="#">Корзина: пока пуста</a>
+            </li>
+            <li class="main-nav__item  main-nav__item--desktop"><a href="#">Новые поступления</a></li>
+            <li class="main-nav__item  main-nav__item--desktop"><a href="#">Распродажа</a></li>
+            <li class="main-nav__item  main-nav__item--tablet">Бесплатная доставка по России</li>
+          </ul>
+        </div>
       </nav>
       <div class="intro">
         <h1 class="intro__header">Каталог товаров</h1>
@@ -37,10 +53,14 @@
               <img src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
             </a>
             <div class="catalog-item__wrapper">
-              <a class="catalog-item__title" href="#">Зайчик-попрыгайчик</a>
-              <p class="catalog-item__details">Рост 30 см, вес 200 г</p>
-              <span class="catalog-item__price">1 200 руб.</span>
-              <a class="catalog-item__add" href="#"></a>
+              <div class="catalog-item__header">
+                <a class="catalog-item__title" href="#">Зайчик-попрыгайчик</a>
+                <p class="catalog-item__details">Рост 30 см, вес 200 г</p>
+              </div>
+              <div class="catalog-item__footer">
+                <span class="catalog-item__price">1 200 руб.</span>
+                <a class="catalog-item__add" href="#"></a>
+              </div>
             </div>
           </article>
           <article class="catalog-item">
@@ -48,10 +68,14 @@
               <img src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
             </a>
             <div class="catalog-item__wrapper">
-              <a class="catalog-item__title" href="#">Корзинка для белья</a>
-              <p class="catalog-item__details">Диаметр 15 см, высота 10 см</p>
-              <span class="catalog-item__price">690 руб.</span>
-              <a class="catalog-item__add" href="#"></a>
+              <div class="catalog-item__header">
+                <a class="catalog-item__title" href="#">Корзинка для белья</a>
+                <p class="catalog-item__details">Диаметр 15 см, высота 10 см</p>
+              </div>
+              <div class="catalog-item__footer">
+                <span class="catalog-item__price">690 руб.</span>
+                <a class="catalog-item__add" href="#"></a>
+              </div>
             </div>
           </article>
           <article class="catalog-item">
@@ -59,34 +83,39 @@
               <img src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="Корзинка для игрушек">
             </a>
             <div class="catalog-item__wrapper">
-              <a class="catalog-item__title" href="#">Большая корзинка для игрушек</a>
-              <p class="catalog-item__details">Диаметр 30 см, высота 30 см</p>
-              <span class="catalog-item__price">1 500 руб.</span>
-              <a class="catalog-item__add" href="#"></a>
+              <div class="catalog-item__header">
+                <a class="catalog-item__title" href="#">Большая корзинка для игрушек</a>
+                <p class="catalog-item__details">Диаметр 30 см, высота 30 см</p>
+              </div>
+              <div class="catalog-item__footer">
+                <span class="catalog-item__price">1 500 руб.</span>
+                <a class="catalog-item__add" href="#"></a>
+              </div>
             </div>
           </article>
         </div>
       </section>
 
-      <!--ADD TO BASKET-->
+      <!--MODAL-->
 
+      <div class="overlay  overlay--hidden"></div>
       <section class="modal  modal--hidden">
         <div class="modal__wrapper">
           <form action="https://echo.htmlacademy.ru" method="post">
             <b class="modal__title">Добавить в корзину</b>
-            <fieldset class="form-block">
-              <span class="form-block__select">Выберите размер:</span>
-              <div class="form-field">
-                <input class="form-field__input" type="radio" name="size-field" id="size-s" value="s" checked>
-                <label class="form-field__label  form-field__label--selected" for="size-s">S</label>
+            <fieldset class="modal-block">
+              <span class="modal-block__select">Выберите размер:</span>
+              <div class="modal-field">
+                <input class="modal-field__input" type="radio" name="size-field" id="size-s" value="s" checked>
+                <label class="modal-field__label  form-field__label--selected" for="size-s">S</label>
               </div>
-              <div class="form-field">
-                <input class="form-field__input" type="radio" name="size-field" id="size-m" value="m">
-                <label class="form-field__label" for="size-m">M</label>
+              <div class="modal-field">
+                <input class="modal-field__input" type="radio" name="size-field" id="size-m" value="m">
+                <label class="modal-field__label" for="size-m">M</label>
               </div>
-              <div class="form-field">
-                <input class="form-field__input" type="radio" name="size-field" id="size-l" value="l">
-                <label class="form-field__label" for="size-l">L</label>
+              <div class="modal-field">
+                <input class="modal-field__input" type="radio" name="size-field" id="size-l" value="l">
+                <label class="modal-field__label" for="size-l">L</label>
               </div>
             </fieldset>
             <button class="btn  modal__add" type="submit">Добавить</button>
@@ -94,16 +123,24 @@
         </div>
       </section>
 
-      <!--PROCESS-->
+      <!--PRODUCTION-->
 
-      <section class="process">
-        <div class="process__wrapper">
-          <span class="process__title">Процесс производства</span>
-        </div>
-        <video class="process__video" src="http://placehold.it" preload="metadata" poster="img/video-mobile@1x.jpg" width="400" height="225"></video>
-        <div class="process__wrapper">
-          <p class="process__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-          <a class="btn  process__order" href="#">Сделать заказ</a>
+      <section class="production">
+        <div class="production__wrapper">
+          <div class="production__video"></div>
+          <div class="production__process">
+            <div class="production__header">
+              <div class="production__icon"></div>
+              <span class="production__title">Процесс производства</span>
+            </div>
+            <div class="production__picture">
+              <img src="img/video-mobile@1x.jpg" width="260" height="150" alt="Процесс производства">
+            </div>
+            <div class="production__info">
+              <p class="production__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+              <a class="btn  production__order" href="#">Сделать заказ</a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -112,6 +149,9 @@
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
+        <div class="page-footer__logo">
+          <img src="img/logo-mobile.svg" width="85" height="35" alt="MISHKA">
+        </div>
         <div class="social">
           <a class="social__link social__link--in" href="https://www.instagram.com/htmlacademy"></a>
           <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy"></a>
@@ -123,5 +163,21 @@
         </div>
       </div>
     </footer>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>
