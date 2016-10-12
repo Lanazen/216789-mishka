@@ -7,8 +7,8 @@
   color: $main-text-color;
 
   &--index {
-  min-height: 355px;
-  background: url(/img/hero-mobile@1x.jpg) no-repeat 50% -20%;
+    min-height: 355px;
+    background: url(/img/hero-mobile@1x.jpg) no-repeat 50% -20%;
   }
 }
 
@@ -29,9 +29,9 @@
     min-height: 115px;
     border-top: 1px solid  $border-color;
 
-   &--index {
-    min-height: 745px;
-    background-size: cover;
+    &--index {
+      min-height: 745px;
+      background-size: cover;
     }
   }
 
