@@ -66,15 +66,16 @@
   padding: 13px 0;
   font-family: $font-open-sans-bold;
   font-size: 17px;
-  outline: 2px solid $border-color;
+  border: 2px solid $border-color;
+  outline: none;
   cursor: pointer;
 
   &:hover {
-    outline: 2px solid #c7c7c7;
+    border: 2px solid #c7c7c7;
   }
 
-  &:active {
-    outline: 2px solid $main-color;
+  &:checked {
+    border: 2px solid $main-color;
   }
 }
 

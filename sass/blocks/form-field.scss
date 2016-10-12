@@ -91,12 +91,13 @@
   font-size: 17px;
   border: none;
   border-bottom: 2px solid $main-text-color;
+  outline: none;
 
   &:hover {
     border-bottom: 2px solid $main-color;
   }
 
-  &:active {
+  &:checked {
     border-bottom: 2px solid $main-color;
   }
 
@@ -143,6 +144,7 @@
 
   &:active {
     border: 2px solid $main-color;
+    outline: none;
   }
 
   &:invalid {
